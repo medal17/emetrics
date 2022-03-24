@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 0.22rem;
 }
 
 .main {
@@ -31,6 +31,32 @@
 .title a {
   color: #0070f3;
   text-decoration: none;
+}
+
+.heroBg {
+  background-image: url("../resources/background/Frame.png");
+  object-fit: scale-down;
+}
+
+.artBg {
+  background-image: url("../resources/background/bagBg.png");
+  object-fit: cover;
+}
+
+.startedBg {
+  background-image: url("../resources/background/getStartedBg.png");
+  object-fit: cover;
+  background-color: rgb(220, 220, 252,0.2);
+}
+
+.joinBg{
+  background-color: rgb(220, 220, 252,0.5);
+}
+
+.insightImage{
+  height: 85px;
+  border-radius: 10px;
+  width:100%;
 }
 
 .title a:hover,
