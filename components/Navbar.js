@@ -1,18 +1,6 @@
 import React, {useState} from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  useMediaQuery,
-  Button,
-  Grid,
-  useScrollTrigger,
-  Slide,
-  Menu,
-  MenuItem,
-  Drawer
-} from "@mui/material";
+import { AppBar, Toolbar, IconButton, Typography, useMediaQuery, Button,
+  Grid, useScrollTrigger, Slide, Menu, MenuItem, Drawer, Popover } from "@mui/material";
 import MenuIcon from '@mui/material/Menu';
 import { useTheme } from '@mui/material/styles';
 import Link from 'next/link'
@@ -24,31 +12,8 @@ import Us from '../resources/images/Us.png'
 import Uk from '../resources/images/Uk.png'
 import {useRouter} from 'next/router'
 import {IoMenu} from 'react-icons/io5'
-
-
-// const useStyles = makeStyles({
-//     root: {
-//         flexGrow: 1
-//       },
-//       menuButton: {
-//         marginRight: 2
-//       },
-//       title: {
-//         flexGrow: 1
-//       }
-   
-//   });
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1
-//   },
-//   menuButton: {
-//     marginRight: theme.spacing(2)
-//   },
-//   title: {
-//     flexGrow: 1
-//   }
-// }));
+import {VscDebugBreakpointLog} from 'react-icons/vsc'
+import SolutionsPoints from "./Hero/SolutionPoint";
 
 function HideOnScroll(props) {
   const { children } = props;
@@ -90,7 +55,18 @@ const handleSelectFlag =(value)=>{
   setAnchorEl(null)
 }
 
-console.log(route.pathname)
+const [anchorS, setAnchorS] = useState(null);
+
+  const handleClickS = (event) => {
+    setAnchorS(event.currentTarget);
+  };
+
+  const handleCloseS = () => {
+    setAnchorS(null);
+  };
+
+  const openSolutions = Boolean(anchorS);
+  const id = openSolutions ? 'simple-popover' : undefined;
 
   return (
     <div >
@@ -98,14 +74,7 @@ console.log(route.pathname)
         {/* <BrowserRouter> */}
           <AppBar sx={{bgcolor:'white', boxShadow:'none'}}>
             <Toolbar>
-              {/* <Typography
-                variant="h5"
-                component="p"
-                color="textSecondary"
-                // className={classes.title}
-              >
-                Murali
-              </Typography> */}
+             
               {isMobile ? (
                <Grid md={11} >
                     <Grid container paddingY={2}>
@@ -150,14 +119,14 @@ console.log(route.pathname)
                     </Drawer>
                 </Grid>
               ) : (
-                <Grid container  justifyContent='space-between' style={{ marginRight: "2rem" }}>
+                <Grid container md={12}  justifyContent='space-between' >
                     <Grid item md={1} py={3}>
                         <Image src={Logo}/>
                     {/* <Typography fontWeight='500' sx={{color:'#031842', flexGrow:1, cursor:'pointer'}}>Home</Typography> */}
 
                     </Grid>
-                    <Grid item  md={9}>
-                        <Toolbar>
+                    <Grid item md={11} py={1}>
+                        <Toolbar sx={{float:'right'}}>
                             <Link href="/" style={{backgroundColor:'red'}}>
                                 <Typography mx={3} fontWeight='500'  sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/'?'3px solid #F2C94C':''}}>Home</Typography>
                             </Link>
@@ -166,9 +135,61 @@ console.log(route.pathname)
                                 <Typography mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/about'?'3px solid #F2C94C':''}}>About</Typography>
                             </Link>
 
-                            <Link href="/">
-                                <Typography mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/Solution'?'3px solid #F2C94C':''}}>Solutions</Typography>
-                            </Link>
+                            {/* <Link href="/"> */}
+                                <Typography onClick={handleClickS} mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/Solution'?'3px solid #F2C94C':''}}>Solutions</Typography>
+                                <Popover
+                                  id={id}
+                                  open={openSolutions}
+                                  anchorEl={anchorS}
+                                  onClose={handleCloseS}
+                                  anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'center',
+                                  }}
+                                >
+                                  <Grid sx={{width:'55vw'}} px={{md:2}} py={{md:2}} container>
+                                    <SolutionsPoints
+                                      id={0}
+                                      title='Appraisal Data Generation Framework'
+                                      body='designed to ensure that organizations produce 
+                                      better plans for how they might effectively 
+                                      respond to the new and emerging future.'
+                                    />
+
+                                    <SolutionsPoints
+                                      id={1}
+                                      title='Key Performance Indicators Analytics'
+                                      body='Extraction of result based KPIs and the other parameters especially for the none sales related 
+                                      job functions (backend) could become an herculean task if the right methodologies are not adopted.'
+                                    />
+
+                                    <SolutionsPoints
+                                      id={2}
+                                      title='Corporate Strategy Development'
+                                      body='Designed to ensure that organizations produce better plans for how they might effectively respond to the new and emerging future.'
+                                    />
+                                    
+                                    <SolutionsPoints
+                                      id={3}
+                                      title='Process Documentation'
+                                      body='identify the current state of a process to know how you can improve it'
+                                    />
+
+                                    <SolutionsPoints
+                                      id={4}
+                                      title='Performance Management'
+                                      body=' while sustaining performance, productivity, and the motivation of employees. In recent years, it has become obvious that traditional performance management is ineffective.'
+                                    />
+                                    
+                                    <SolutionsPoints
+                                      id={5}
+                                      title='Performance Management Software'
+                                      body='E-Metric Suite Software is designed to provide for the need of organizations globally to monitor and manage performance across all tiers as daily operational activities of the workforce are linked to the corporate strategic goals and objectives of the organization on the go.'
+                                    />
+
+                                  </Grid>
+                                </Popover>
+                            {/* </Link> */}
 
                             <Link href="/partners">
                                 <Typography mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/partners'?'3px solid #F2C94C':''}}>Partners</Typography>

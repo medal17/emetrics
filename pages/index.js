@@ -135,11 +135,11 @@ export default function Home() {
           </Grid>
 
           <Grid container justifyContent='center' my={4} px={3}>
-            <Typography fontWeight={800} textAlign='center' mx={2} fontSize={25}>
+            <Typography fontWeight={800} textAlign='center' my={2} mx={2} fontSize={25}>
               Companies we helped grow
             </Typography>
             
-            <Grid container justifyContent='center' alignItems='center' md={10} px={8}>
+            <Grid container justifyContent='center' alignItems='center' mt={2} md={10} px={8}>
               <Partners image={Rplus}/>
               <Partners image={Imose}/>
               <Partners image={Teesas}/>
@@ -176,9 +176,11 @@ export default function Home() {
           </Grid>
       </main>
 
-      {/* <footer className={styles.footer}> */}
+      <footer >
+      {/* <Grid container sx={{bgcolor:'red'}} md={12}> */}
         <Footer/>
-      {/* </footer> */}
+      {/* </Grid> */}
+      </footer>
     </div>
   )
 }
