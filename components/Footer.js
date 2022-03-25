@@ -12,17 +12,16 @@ import {FaFacebookF, FaTwitter} from 'react-icons/fa'
 export default function Footer (){
     return(
 
-        <footer>
-            <Grid sx={{ backgroundColor: "#FBFDFF"}} paddingY={5} paddingX={1}>
+            <Grid container md={12} lg={12} sx={{ backgroundColor: "#FBFDFF"}} justifyContent='center' paddingY={5} paddingX={1}>
                 <Toolbar variant="dense">
-                <Grid justifyContent='space-around' container spacing={{ xs: 1, sm: 2, md: 4 }} >
-                    <Grid item lg={1} xs={12} sm={4} sx={{ textAlign: "left" }}  >
+                <Grid justifyContent='space-between' container spacing={{ xs: 1, sm: 2, md: 4, lg:10 }} >
+                    <Grid item lg={2} xs={12} sm={4} sx={{ textAlign: "left" }}  >
                         <Image src={Logo}/>
                     </Grid>
                    
         {/* Social media group 1 */}
 
-                    <Grid item sm={2} textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  xs={12} >
+                    <Grid item lg={3} sm={4} textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  xs={12} >
                         <Typography variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
                         Contact Us
                         </Typography>
@@ -57,7 +56,7 @@ export default function Footer (){
 
                 {/* //Social Media Group 2 */}
 
-                    <Grid item sm={2} xs={12} style={{ textAlign: "left" }}>
+                    <Grid item lg={2} sm={3} xs={12} style={{ textAlign: "left" }}>
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  variant='body1' fontWeight='bolder'  className='text' marginBottom={1}>
                             E-metric
                         </Typography>
@@ -109,41 +108,54 @@ export default function Footer (){
 
                     </Grid>
 
-
-                    <Grid item xs={12} sm={2} style={{ textAlign: "left" }}>
-
+                    <Grid item xs={12} sm={3} >
                         <Typography variant='body1' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} fontWeight='bolder' className='text' marginBottom={1}>
                         Connect with us
                         </Typography>
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' className='text'>
                         Schedule an appointment with us
                         </Typography>
-                        <Grid item md={10}>
+                        <Grid item md={9}>
                             <RoundedLineButton text='Book Now' px={4} py={1}/>
-                        </Grid>
+                    </Grid>
                              
-                        </Grid>
-
-
+                    </Grid>
                         {/* // Social media Icons */}
-                        <Grid item xs={12} sm={1} columnGap={2} >
-                            <AiFillLinkedin size={24}/><br/><br/>
-                            <FaTwitter size={24}/><br/><br/>
-                            <FaFacebookF size={24}/><br/><br/>
-                            <AiFillInstagram size={24}/><br/><br/>
+                        <Grid item xs={12} sm={1} columnGap={1} >
+                            <Link href='https://www.linkedin.com/company/emetric-suite/'>
+                                <a target='_blank'>
+                                <AiFillLinkedin size={24}/>
+                                </a>
+                            </Link>
+                            <br/><br/>
+                            <Link href=''>
+                                <a target='_blank'>
+                                    <FaTwitter size={24}/>
+                                </a>
+                            </Link><br/><br/>
+                            <Link href='https://www.facebook.com/emetricsuitesoftware/'>
+                                <a target='_blank'>
+                                    <FaFacebookF size={24}/>
+                                </a>
+                            </Link><br/><br/>
+                            <Link href='https://www.instagram.com/emetricsuite_nigeria'>
+                                <a target='_blank'>
+                                    <AiFillInstagram size={24}/>
+                                </a>
+                            </Link><br/><br/>
                         </Grid>
-                </Grid>
+                    </Grid>
                 
                 </Toolbar>
                 <br/>
+                <br/>
                 <Grid justifyContent='space-around' container mt={2}>
-                <Typography textAlign='center' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' sx={{ color: "black" }}>
+                    <Typography textAlign='center' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' sx={{ color: "black" }}>
                         &copy; {new Date().getFullYear()} All rights reserved.
                     </Typography>
                 </Grid>
-                <br/>
+                {/* <br/> */}
+                <Toolbar />
             </Grid>
-            {/* <Toolbar /> */}
-            </footer>
   )
 }

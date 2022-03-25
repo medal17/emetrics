@@ -135,11 +135,11 @@ export default function Home() {
           </Grid>
 
           <Grid container justifyContent='center' my={4} px={3}>
-            <Typography fontWeight={800} textAlign='center' mx={2} fontSize={25}>
+            <Typography fontWeight={800} textAlign='center' my={2} mx={2} fontSize={25}>
               Companies we helped grow
             </Typography>
             
-            <Grid container justifyContent='center' alignItems='center' md={10} px={8}>
+            <Grid container justifyContent='center' alignItems='center' mt={2} md={10} px={8}>
               <Partners image={Rplus}/>
               <Partners image={Imose}/>
               <Partners image={Teesas}/>
@@ -150,7 +150,7 @@ export default function Home() {
               <Partners image={Wema}/>
               <Partners image={Rplus}/>
               <Partners image={Wema}/>
-              <Partners image={Sterling}/>
+              {/* <Partners image={Sterling}/> */}
             </Grid>
 
           </Grid>
@@ -162,7 +162,7 @@ export default function Home() {
                   </Grid> */}
                   
                 <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
-                    Get Started with E-metricsuite today
+                    Get Started with us today
                   </Typography>
 
                   <Typography fontWeight={400} textAlign='center' fontSize={17}>
@@ -176,9 +176,11 @@ export default function Home() {
           </Grid>
       </main>
 
-      {/* <footer className={styles.footer}> */}
+      <footer >
+      {/* <Grid container sx={{bgcolor:'red'}} md={12}> */}
         <Footer/>
-      {/* </footer> */}
+      {/* </Grid> */}
+      </footer>
     </div>
   )
 }

@@ -9,13 +9,20 @@ import Navbar from "../components/Navbar";
 import AboutHero from '../resources/images/aboutImage.png'
 import Team from '../resources/images/team.png';
 import styles from '../styles/Home.module.css'
+import PartnerHero from "../components/Partner/PartnerHero";
+import ExpertisePonts from "../components/About/ExpertisePoints";
+import db from '../resources/images/db1.jpg'
+import richie from '../resources/images/richie.jpg'
+import rob from '../resources/images/Robert-Ebers.jpg'
+import Logo from '../resources/images/emetric.png'
+import Image from 'next/image'
 
 export default function About (){
     return(
         <Grid>
             <Navbar/>
             <Grid container justifyContent='space-around' md={11} pt={{ xs: 1, sm: 2, md: 7 }}>
-                <FeatureExpand
+                <PartnerHero
                 image={AboutHero}
                 direction='ltr'
                 header='We Are Increasing Business Success 
@@ -41,14 +48,42 @@ export default function About (){
                 />
             </Grid>
 
-            <Grid container justifyContent='center' py={7} >
-                <Grid px={7} py={4} item sx={{ margin:'0 auto'}} className={styles.startedBg} md={10} borderRadius={2}>
-                  {/* <Grid container justifyContent='center'>
-                    <Image src={BagImage} style={{margin:'0 auto'}}/>
-                  </Grid> */}
+              <Grid container justifyContent='space-around' py={5}>
+                  <HeadText text='Our Team' size={30} />
+
+                  <Grid container justifyContent='center' my={4}>
+                      <TeamCard image={rob} name='Robert P. Ebers' role='Chief Executive Officer'/>
+                      
+                      <TeamCard image={db} name='Debo Adebayo' role='Director of Business Operations (EMEA)'/>
+                      <TeamCard image={richie} name='Martin Baillie' role='Director of Business Operations (Europe Market)'/>
+                  </Grid>
                   
-                <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
-                    Get Started with E-metricsuite today
+              </Grid>
+
+        <Grid container justifyContent='center' py={7} >
+            <Grid container  px={4} py={4} md={8} item className={styles.transparentBg}  borderRadius={2}>
+                <Grid container justifyContent={'center'}>
+                    <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
+                        Our Expertise
+                    </Typography>
+                </Grid>
+                
+                <Grid container justifyContent='center'>
+                    <ExpertisePonts text='Performance Measurement'/>
+                    <ExpertisePonts text='Simplified System'/>
+                    <ExpertisePonts text='Agile Task'/>
+                    <ExpertisePonts text='Tracking Software'/>
+                    <ExpertisePonts text='Structured Appraisal Software'/>
+                    <ExpertisePonts text='Data Capture'/>
+                </Grid>  
+            </Grid>              
+        </Grid>
+
+
+          <Grid container justifyContent='center' py={7} >
+            <Grid px={7} py={4} item sx={{ margin:'0 auto'}} className={styles.startedBg} md={10} borderRadius={2}>  
+                 <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
+                    Get Started with us today
                   </Typography>
 
                   <Typography fontWeight={400} textAlign='center' fontSize={17}>
@@ -59,19 +94,7 @@ export default function About (){
                   </Grid>
                   
               </Grid>
-
-              <Grid container justifyContent='space-around' py={5}>
-                  <HeadText text='Our Team' size={20} />
-
-                  <Grid container justifyContent='center' my={4}>
-                      <TeamCard image={Team} name='John Kennedy Woo' role='Global CEO'/>
-                      <TeamCard image={Team} name='John Kennedy Woo' role='Global CEO'/>
-                      <TeamCard image={Team} name='John Kennedy Woo' role='Global CEO'/>
-
-                  </Grid>
-                  
-              </Grid>
-          </Grid>
+            </Grid>
 
             <Footer/>
         </Grid>

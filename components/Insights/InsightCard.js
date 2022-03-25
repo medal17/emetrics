@@ -1,9 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Home.module.css';
+import { useRouter } from "next/router";
 
 
 export default function InsightCard (props) {
+    const route = useRouter()
+
     return (
         <Grid item md={4} px={2}>
             <Grid container position='relative' borderRadius={6} sx={{height:'185px'}}>
@@ -29,9 +32,10 @@ export default function InsightCard (props) {
             <Grid container py={1} justifyContent='space-around'>
                 {props.body}
             </Grid>
-            <Typography py={1} sx={{cursor:'pointer'}}  fontWeight={500}>
-                Read Article
-            </Typography>
+
+                <Typography onClick={()=>route.push({pathname:'/insightDetails',query: {mg:props.image, id: props.id } })} py={1} sx={{cursor:'pointer'}}  fontWeight={500}>
+                    Read Article
+                </Typography>
         </Grid>
     )
 }

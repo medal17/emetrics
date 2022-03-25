@@ -49,6 +49,12 @@
   background-color: rgb(220, 220, 252,0.2);
 }
 
+.transparentBg {
+  background-color: rgba(132, 132, 248, 0.1);
+  margin:'0 auto'
+}
+
+
 .joinBg{
   background-color: rgb(220, 220, 252,0.5);
 }
