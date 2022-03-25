@@ -122,10 +122,27 @@ export default function Footer (){
                     </Grid>
                         {/* // Social media Icons */}
                         <Grid item xs={12} sm={1} columnGap={1} >
-                            <AiFillLinkedin size={24}/><br/><br/>
-                            <FaTwitter size={24}/><br/><br/>
-                            <FaFacebookF size={24}/><br/><br/>
-                            <AiFillInstagram size={24}/><br/><br/>
+                            <Link href='https://www.linkedin.com/company/emetric-suite/'>
+                                <a target='_blank'>
+                                <AiFillLinkedin size={24}/>
+                                </a>
+                            </Link>
+                            <br/><br/>
+                            <Link href=''>
+                                <a target='_blank'>
+                                    <FaTwitter size={24}/>
+                                </a>
+                            </Link><br/><br/>
+                            <Link href='https://www.facebook.com/emetricsuitesoftware/'>
+                                <a target='_blank'>
+                                    <FaFacebookF size={24}/>
+                                </a>
+                            </Link><br/><br/>
+                            <Link href='https://www.instagram.com/emetricsuite_nigeria'>
+                                <a target='_blank'>
+                                    <AiFillInstagram size={24}/>
+                                </a>
+                            </Link><br/><br/>
                         </Grid>
                     </Grid>
                 

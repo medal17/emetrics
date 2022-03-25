@@ -29,7 +29,8 @@ export default function Insights() {
                 </Grid>
 
                 <Grid container px={{md:3}} mt={3}>
-                    <InsightCard 
+                    <InsightCard
+                        id ={1} 
                         image={Team} 
                         category='Economy' 
                         date='December 18, 2020' 
@@ -40,6 +41,7 @@ export default function Insights() {
                     />
 
                     <InsightCard 
+                        id={2}
                         image={Team} 
                         category='Business' 
                         date='December 18, 2020' 
@@ -50,6 +52,7 @@ export default function Insights() {
                     />
 
                     <InsightCard 
+                        id={3}
                         image={Team} 
                         category='Technology' 
                         date='December 18, 2020' 
@@ -66,6 +69,7 @@ export default function Insights() {
 
                 <Grid container px={{md:3}} mt={3}>
                     <InsightCard 
+                        id={4}
                         image={Team} 
                         category='Economy' 
                         date='December 18, 2020' 
@@ -75,7 +79,8 @@ export default function Insights() {
                         labelColor="#ECB16D"
                     />
 
-                    <InsightCard 
+                    <InsightCard
+                        id={5} 
                         image={Team} 
                         category='Business' 
                         date='December 18, 2020' 
@@ -85,7 +90,8 @@ export default function Insights() {
                         labelColor="#407BFF"
                     />
 
-                    <InsightCard 
+                    <InsightCard
+                        id={6} 
                         image={Team} 
                         category='Technology' 
                         date='December 18, 2020' 
@@ -101,7 +107,8 @@ export default function Insights() {
                 </Grid>
 
                 <Grid container px={{md:3}} mt={3}>
-                    <InsightCard 
+                    <InsightCard
+                        id={7} 
                         image={Team} 
                         category='Economy' 
                         date='December 18, 2020' 
@@ -111,7 +118,8 @@ export default function Insights() {
                         labelColor="#ECB16D"
                     />
 
-                    <InsightCard 
+                    <InsightCard
+                        id={8} 
                         image={Team} 
                         category='Business' 
                         date='December 18, 2020' 
@@ -122,6 +130,7 @@ export default function Insights() {
                     />
 
                     <InsightCard 
+                        id={9}
                         image={Team} 
                         category='Technology' 
                         date='December 18, 2020' 

@@ -14,6 +14,8 @@ import ExpertisePonts from "../components/About/ExpertisePoints";
 import db from '../resources/images/db1.jpg'
 import richie from '../resources/images/richie.jpg'
 import rob from '../resources/images/Robert-Ebers.jpg'
+import Logo from '../resources/images/emetric.png'
+import Image from 'next/image'
 
 export default function About (){
     return(
@@ -50,10 +52,10 @@ export default function About (){
                   <HeadText text='Our Team' size={30} />
 
                   <Grid container justifyContent='center' my={4}>
-                      <TeamCard image={rob} name='Robert Ebers' role='Global CEO'/>
-                      <TeamCard image={richie} name='Martin Baillie' role='Head of Business (Europe Market)'/>
-                      <TeamCard image={db} name='B Adebayo' role='Head of Business (Middle East & Asian Market)'/>
-
+                      <TeamCard image={rob} name='Robert P. Ebers' role='Chief Executive Officer'/>
+                      
+                      <TeamCard image={db} name='Debo Adebayo' role='Director of Business Operations (EMEA)'/>
+                      <TeamCard image={richie} name='Martin Baillie' role='Director of Business Operations (Europe Market)'/>
                   </Grid>
                   
               </Grid>
@@ -81,7 +83,7 @@ export default function About (){
           <Grid container justifyContent='center' py={7} >
             <Grid px={7} py={4} item sx={{ margin:'0 auto'}} className={styles.startedBg} md={10} borderRadius={2}>  
                  <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
-                    Get Started with E-metricsuite today
+                    Get Started with us today
                   </Typography>
 
                   <Typography fontWeight={400} textAlign='center' fontSize={17}>

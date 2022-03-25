@@ -136,7 +136,7 @@ const [anchorS, setAnchorS] = useState(null);
                             </Link>
 
                             {/* <Link href="/"> */}
-                                <Typography onClick={handleClickS} mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/Solution'?'3px solid #F2C94C':''}}>Solutions</Typography>
+                                <Typography onClick={handleClickS} mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/solutionDetails'?'3px solid #F2C94C':''}}>Solutions</Typography>
                                 <Popover
                                   id={id}
                                   open={openSolutions}
@@ -203,8 +203,8 @@ const [anchorS, setAnchorS] = useState(null);
                                 <Typography mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/insight'?'3px solid #F2C94C':''}}>Insights</Typography>
                             </Link>
                             &nbsp;
-                            <RoundedButton text='Book a Demo' mx={3}/>
- 
+                              <RoundedButton text='Book a Demo' blank={true} click={()=>route.push('https://www.calendly.com/emetricsuite')} mx={3}/>
+                        
                             <Typography ml={3}  id="demo-positioned-menu" px={2} onClick={handleClick}  className='text nav-link' variant="body2" component="div" >
                               {/* <Grid className='text' container style={{bgcolor:'red'}}  justifyContent='center'>    */}
                                   <Image src={flag ==0 ? Us : (flag==1 ?Uk :Nig)} height={26} width={36} />

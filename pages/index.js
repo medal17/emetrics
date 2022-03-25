@@ -150,7 +150,7 @@ export default function Home() {
               <Partners image={Wema}/>
               <Partners image={Rplus}/>
               <Partners image={Wema}/>
-              <Partners image={Sterling}/>
+              {/* <Partners image={Sterling}/> */}
             </Grid>
 
           </Grid>
@@ -162,7 +162,7 @@ export default function Home() {
                   </Grid> */}
                   
                 <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
-                    Get Started with E-metricsuite today
+                    Get Started with us today
                   </Typography>
 
                   <Typography fontWeight={400} textAlign='center' fontSize={17}>
