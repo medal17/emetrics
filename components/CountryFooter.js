@@ -9,7 +9,7 @@ import {AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
 import {FaFacebookF, FaTwitter} from 'react-icons/fa'
 // imoprt
 
-export default function Footer (){
+export default function CountryFooter (props){
     return(
 
             <Grid container md={12} lg={12} sx={{ backgroundColor: "#FBFDFF"}} justifyContent='center' paddingY={5} paddingX={1}>
@@ -30,7 +30,7 @@ export default function Footer (){
                         <Grid container className='nav-link'>
                         {/* <Twitter/>  */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  className='text'   variant='body2' marginBottom={2}> 
-                            9304 Forest lane, Suite S207 Dallas, Texas 75243
+                            {props.address}
                         </Typography>
                         </Grid>
                     </Link>
@@ -40,7 +40,7 @@ export default function Footer (){
                         <Grid container  className='nav-link' >
                         {/* <LinkedIn marginTop={2} /> */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text ' variant='body2' marginBottom={2}>
-                        Email : info@emetricsuite.com</Typography>
+                        Email : {props.email}</Typography>
                         </Grid>
                     </Link>
 
@@ -48,7 +48,7 @@ export default function Footer (){
                         <Grid container className='nav-link'>
                         {/* <Facebook marginTop={2}/> */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' variant='body2' marginBottom={2}>
-                        Contact : +1 (616) 541-4781
+                        Contact : {props.phone}
                         </Typography>
                         </Grid>
                     </Link>
@@ -62,7 +62,7 @@ export default function Footer (){
                         </Typography>
 
                     <Grid container className='nav-link'>
-                        <Link href="https://www.youtube.com" underline="always">
+                        <Link href="/about" underline="always">
                         <>
                             {/* <YouTube/> */}
                             <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text ' variant='body2' marginBottom={2}> 
@@ -72,7 +72,7 @@ export default function Footer (){
                     </Grid>
 
                     <Grid container className='nav-link'>
-                        <Link href="https://www.instagram.com" underline="always" >
+                        <Link href="/" underline="always" >
                         <>
                             {/* <Instagram/>  */}
                             <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text nav-link' variant='body2' marginBottom={2} justify='center'>
@@ -83,7 +83,7 @@ export default function Footer (){
                     </Grid>
 
                     <Grid container className='nav-link'>
-                        <Link href="https://www.instagram.com" underline="always" >
+                        <Link href="/" underline="always" >
                         <>
                             {/* <Instagram/>  */}
                             <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text nav-link' variant='body2' marginBottom={2} justify='center'>
@@ -106,7 +106,7 @@ export default function Footer (){
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' className='text'>
                         Schedule an appointment with us
                         </Typography>
-                        <Grid item md={8}>
+                        <Grid item md={7}>
                             <RoundedLineButton text='Book Now' px={4} py={1}/>
                     </Grid>
                              
