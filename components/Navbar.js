@@ -52,6 +52,7 @@ const Navbar = (props) => {
 
 const handleSelectFlag =(value)=>{
   setFlag(value);
+  value ==2 ? route.push('/home') : (value==1 ? route.push('/ukHome') : route.push('/'))
   setAnchorEl(null)
 }
 
@@ -193,10 +194,6 @@ const [anchorS, setAnchorS] = useState(null);
 
                             <Link href="/partners">
                                 <Typography mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/partners'?'3px solid #F2C94C':''}}>Partners</Typography>
-                            </Link>
-
-                            <Link href="/">
-                                <Typography mx={3} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/Solution'?'3px solid #F2C94C':''}}>Location</Typography>
                             </Link>
 
                             <Link href="/insight">

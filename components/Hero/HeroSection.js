@@ -2,7 +2,8 @@ import {Grid, Typography} from '@mui/material';
 import HeroImage from '../../resources/images/heroImage.png'
 import Image from 'next/image'
 import RoundedButton from '../Buttons/RoundedButton';
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/Home.module.css';
+import Link from 'next/link'
 
 export default function HeroSection(){
     return(
@@ -22,11 +23,16 @@ export default function HeroSection(){
                     <Grid item>
                         <RoundedButton text='Get Started'/>
                     </Grid>
-                    <Grid item>
-                        <Typography fontWeight={800} sx={{color:'#D6B44D'}} fontSize={19}>
-                            Request for a Demo
-                        </Typography>
-                    </Grid>
+
+                    <Link href='https://www.calendly.com/emetricsuite'>
+                        <a target='_blank'>
+                            <Grid item>
+                                <Typography fontWeight={800} sx={{color:'#D6B44D'}} fontSize={19}>
+                                    Request for a Demo
+                                </Typography>
+                            </Grid>
+                        </a>
+                    </Link>
                 </Grid>
             </Grid>
             <Grid item md={5}>
