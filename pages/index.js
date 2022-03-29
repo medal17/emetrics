@@ -38,7 +38,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1> */}
 
-          <Navbar/>
+          <Navbar country={0}/>
           <HeroSection/>
           <Grid container justifyContent='center' my={2} md={6} sm={12}>
             <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
