@@ -61,14 +61,14 @@ export default function About (){
               </Grid>
 
         <Grid container justifyContent='center' py={7} >
-            <Grid container  px={4} py={4} md={8} item className={styles.transparentBg}  borderRadius={2}>
+            <Grid container  px={{md:4, xs:3}} py={4} md={8} item className={styles.transparentBg}  borderRadius={2}>
                 <Grid container justifyContent={'center'}>
                     <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
                         Our Expertise
                     </Typography>
                 </Grid>
                 
-                <Grid container justifyContent='center'>
+                <Grid container justifyContent={{md:'center', xs:'left'}}>
                     <ExpertisePonts text='Performance Measurement'/>
                     <ExpertisePonts text='Simplified System'/>
                     <ExpertisePonts text='Agile Task'/>
@@ -81,7 +81,7 @@ export default function About (){
 
 
           <Grid container justifyContent='center' py={7} >
-            <Grid px={7} py={4} item sx={{ margin:'0 auto'}} className={styles.startedBg} md={10} borderRadius={2}>  
+            <Grid px={{md:7, sm:2, xs:2}} py={4} item sx={{ margin:'0 auto'}} className={styles.startedBg} md={10} borderRadius={2}>  
                  <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
                     Get Started with us today
                   </Typography>

@@ -24,7 +24,7 @@ export default function PictureOverCard (props){
                 <Image src={props.image}/>
                 
             </Grid> :
-            <Grid item md={7} px={{md:5}} mx={0} py={{md:5}} pr={5} sx={{bgcolor:'#031842'}}>
+            <Grid item md={7} sm={12} xs={12} px={{md:5, sm:2, xs:2}} mx={0} py={{md:5, sm:2, xs:3}} pr={5} sx={{bgcolor:'#031842'}}>
             <Typography fontWeight={800} color='#fff' my={2} fontSize={22}>
                  {props.header}
             </Typography>

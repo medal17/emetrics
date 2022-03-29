@@ -40,7 +40,7 @@ export default function Home() {
 
           <Navbar/>
           <HeroSection/>
-          <Grid container justifyContent='center' my={2} md={6}>
+          <Grid container justifyContent='center' my={2} md={6} sm={12}>
             <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
             Understand KPI Analytics for Productivity
             </Typography>
@@ -50,7 +50,7 @@ export default function Home() {
             </Typography>
           </Grid>
 
-          <Grid container my={3} justifyContent='space-around'>
+          <Grid container my={3} px={{xs:1}} justifyContent='space-around'>
               <FeaturedCard
                 icon={<FaNetworkWired color='#7B9AFF'/>}
                 iconBg='#EDEFF1'
@@ -120,12 +120,12 @@ export default function Home() {
           </Grid>
     
           <Grid container justifyContent='center' className={styles.artBg} py={2}>
-                <Grid px={7} py={7} item className={styles.joinBg} md={7} borderRadius={2}>
+                <Grid px={{md:7, sm:1}} py={7} item className={styles.joinBg} md={7} sm={12} xs={12} borderRadius={2}>
                   <Grid container justifyContent='center'>
                     <Image src={BagImage}/>
                   </Grid>
                   
-                <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
+                <Typography fontWeight={800} textAlign='center' mx={{md:2,sm:1, xs:1}} my={2} fontSize={25}>
                 Join the growing list of our partners across the globe.
                   </Typography>
 
@@ -161,10 +161,8 @@ export default function Home() {
           </Grid>
           {/* <br/> */}
           <Grid container justifyContent='center' sx={{background:`url(${BagBg})`}}>
-                <Grid px={7} py={4} item sx={{ margin:'0 auto'}} className={styles.startedBg} md={10} borderRadius={2}>
-                  {/* <Grid container justifyContent='center'>
-                    <Image src={BagImage} style={{margin:'0 auto'}}/>
-                  </Grid> */}
+                <Grid px={{md:7, sm:2, xs:2}} py={4} item sx={{ margin:'0 auto'}} className={styles.startedBg} md={10} borderRadius={2}>
+                
                   
                 <Typography fontWeight={800} textAlign='center' mx={2} my={2} fontSize={25}>
                     Get Started with us today
