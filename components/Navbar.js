@@ -33,7 +33,7 @@ const Navbar = (props) => {
   const openEl = Boolean(anchorEl);
   const [openTop, setOpenTop]= useState(false)
 
-  const [flag, setFlag] = useState(0)
+  const [flag, setFlag] = useState(props.country)
   const open = Boolean(anchor);
   const theme = useTheme();
   const route = useRouter();

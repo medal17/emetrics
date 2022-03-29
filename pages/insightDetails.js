@@ -96,7 +96,7 @@ export default function insightDetails (){
                     </Grid>
                     <Grid container justifyContent={'center'} py={3}>
                         {/* <Link > */}
-                            <a target='_blank' href={image1} download>
+                            <a target='_blank' href='/Brochure.pdf' download>
                                 <Grid sx={{bgcolor:'#031842', borderRadius:"10px"}}>
                                     <Typography fontWeight={500} py={1.2} px={2.5} sx={{color:'#fff',flexGrow:1, cursor:'pointer'}} >Download</Typography>
                                 </Grid>

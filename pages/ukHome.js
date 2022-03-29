@@ -44,7 +44,7 @@ export default function UkPage() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1> */}
 
-          <Navbar/>
+          <Navbar country={1}/>
           {/* </> */}
           <PartnerHero 
             direction='ltr'
@@ -180,7 +180,7 @@ export default function UkPage() {
         <CountryFooter 
           address='9304 Forest lane, Suite S207 Dallas, Texas 75243' 
           email='info@emetricsuiteUk.com'
-          phone='+1 (616) 541-4781'
+          phone='+1 (504) 499-5921'
           />
       {/* </Grid> */}
       </footer>
