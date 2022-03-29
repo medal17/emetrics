@@ -1,12 +1,16 @@
-import {Grid, Typography} from '@mui/material'
+import { useTheme } from '@mui/material/styles';
+import {Grid, Typography, useMediaQuery} from '@mui/material'
 import Image from 'next/image'
 import RoundedButton from '../Buttons/RoundedButton'
 
 export default function PartnerHero (props){
+
+  const theme = useTheme()  
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     return(
         <Grid  container justifyContent='space-around' alignItems='center' my={3}>
-            {props.direction =='ltr' ?
-            <Grid item md={4} mx={5}>
+            {props.direction =='ltr' && !isMobile  ?
+            <Grid item md={4} sm={12} xs={12} mx={{md:5, sm:2, xs:2}}>
                 <Typography fontWeight={800}  my={2} fontSize={22}>
                      {props.header}
                 </Typography>
@@ -30,13 +34,13 @@ export default function PartnerHero (props){
             
         </Grid>
             }
-            {props.direction =='ltr' 
+            {props.direction =='ltr' && !isMobile
             ?
             <Grid item md={4}>
                 <Image src={props.image}/>
                 
             </Grid> :
-            <Grid item md={4} mx={5} pr={5}>
+            <Grid item md={4} sm={12} xs={12} mx={{md:5, sm:2, xs:2}} pr={{md:5, sm:2,xs:0}}>
             <Typography fontWeight={800}  my={2} fontSize={22}>
                  {props.header}
             </Typography>

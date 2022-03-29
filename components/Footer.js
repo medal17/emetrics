@@ -48,7 +48,7 @@ export default function Footer (){
                         <Grid container className='nav-link'>
                         {/* <Facebook marginTop={2}/> */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' variant='body2' marginBottom={2}>
-                        Contact : +1 (616) 541-4781
+                        Contact : +1 (504) 499-5921
                         </Typography>
                         </Grid>
                     </Link>
@@ -106,13 +106,17 @@ export default function Footer (){
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} variant='body2' className='text'>
                         Schedule an appointment with us
                         </Typography>
-                        <Grid item md={8}>
-                            <RoundedLineButton text='Book Now' px={4} py={1}/>
+                        <Grid item md={8} sm={5} xs={12} px={{xs:7, md:1}}>
+                            <Link href='https://www.calendly.com/emetricsuite'>
+                                <a target='_blank'>
+                                    <RoundedLineButton text='Book Now' px={4} py={1}/>
+                                </a>
+                            </Link>
                     </Grid>
                              
                     </Grid>
                         {/* // Social media Icons */}
-                        <Grid item xs={12} sm={1} columnGap={1} >
+                        <Grid item xs={12} sm={1} px={{xs:5}} columnGap={1} >
                             <Link href='https://www.linkedin.com/company/emetric-suite/'>
                                 <a target='_blank'>
                                 <AiFillLinkedin size={24}/>

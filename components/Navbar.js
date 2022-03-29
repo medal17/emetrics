@@ -11,8 +11,8 @@ import Nig from '../resources/images/Nigeria.png'
 import Us from '../resources/images/Us.png'
 import Uk from '../resources/images/Uk.png'
 import {useRouter} from 'next/router'
-import {IoMenu} from 'react-icons/io5'
-import {VscDebugBreakpointLog} from 'react-icons/vsc'
+import {IoMenu, IoClose} from 'react-icons/io5'
+import {} from 'react-icons/vsc'
 import SolutionsPoints from "./Hero/SolutionPoint";
 
 function HideOnScroll(props) {
@@ -33,7 +33,7 @@ const Navbar = (props) => {
   const openEl = Boolean(anchorEl);
   const [openTop, setOpenTop]= useState(false)
 
-  const [flag, setFlag] = useState(0)
+  const [flag, setFlag] = useState(props.country)
   const open = Boolean(anchor);
   const theme = useTheme();
   const route = useRouter();
@@ -93,30 +93,105 @@ const [anchorS, setAnchorS] = useState(null);
                         <Grid container paddingY={2}>
                             <IconButton marginTop={3} onClick={()=>setOpenTop(!openTop)}>
                                 {/* <MenuRounded /> */}
-                                <IoMenu/>
+                                <IoClose/>
                             </IconButton>
                         </Grid>
-                        <Link href="/">
-                            <Typography onClick={()=>setOpenTop(false)} textAlign='center' className='text nav-link'  variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                                Home
+                        <Link href="/" style={{backgroundColor:'red', paddingY:2}}>
+                            <Typography mx={15} textAlign='center' fontWeight='500' my={1}  sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/'?'3px solid #F2C94C':''}}>Home</Typography>
+                        </Link>
+                        
+                        <Link href="/about" >
+                            <Typography mx={15} textAlign='center' fontWeight='500' my={1} sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/about'?'3px solid #F2C94C':''}}>About</Typography>
+                        </Link>
+
+                            {/* <Link href="/"> */}
+                                <Typography onClick={handleClickS} textAlign='center' my={1} mx={15} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/solutionDetails'?'3px solid #F2C94C':''}}>Solutions</Typography>
+                                <Popover
+                                  id={id}
+                                  open={openSolutions}
+                                  anchorEl={anchorS}
+                                  onClose={handleCloseS}
+                                  anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'center',
+                                  }}
+                                >
+                                  <Grid sx={{width:'100%'}}  py={{md:2}} container>
+                                    <SolutionsPoints
+                                      id={0}
+                                      title='Appraisal Data Generation Framework'
+                                      body='designed to ensure that organizations produce 
+                                      better plans for how they might effectively .'
+                                    />
+
+                                    <SolutionsPoints
+                                      id={1}
+                                      title='Key Performance Indicators Analytics'
+                                      body='Extraction of result based KPIs and the other parameters especially for the none sales related 
+                                      job  ...'
+                                    />
+
+                                    <SolutionsPoints
+                                      id={2}
+                                      title='Corporate Strategy Development'
+                                      body='Designed to ensure that organizations produce better plans for how they might effectively... '
+                                    />
+                                    
+                                    <SolutionsPoints
+                                      id={3}
+                                      title='Process Documentation'
+                                      body='identify the current state of a process to know how you can improve it ...'
+                                    />
+
+                                    <SolutionsPoints
+                                      id={4}
+                                      title='Performance Management'
+                                      body=' while sustaining performance, productivity, and the motivation of employees... '
+                                    />
+                                    
+                                    <SolutionsPoints
+                                      id={5}
+                                      title='Performance Management Software'
+                                      body='E-Metric Suite Software is designed to provide for the need of organizations... '
+                                    />
+
+                                  </Grid>
+                                </Popover>
+                            {/* </Link> */}
+
+                            <Link href="/partners">
+                                <Typography mx={15} textAlign='center' my={1} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/partners'?'3px solid #F2C94C':''}}>Partners</Typography>
+                            </Link>
+
+                            <Link href="/insight">
+                                <Typography mx={15} textAlign='center' my={1} mb={1} fontWeight='500' sx={{color:'#031842', cursor:'pointer', borderBottom:route.pathname=='/insight'?'3px solid #F2C94C':''}}>Insights</Typography>
+                            </Link>
+                            &nbsp;
+                            <Grid container xs={12} justifyContent='center' alignItems={'center'} pb={4}>
+                              <RoundedButton text='Book a Demo' blank={true} click={()=>route.push('https://www.calendly.com/emetricsuite')} mx={3}/>
+                            
+                            <Typography ml={3}  id="demo-positioned-menu" px={2} onClick={handleClick}  className='text nav-link' variant="body2" component="div" >
+                              {/* <Grid className='text' container style={{bgcolor:'red'}}  justifyContent='center'>    */}
+                                  <Image src={flag ==0 ? Us : (flag==1 ?Uk :Nig)} height={26} width={36} />
+                              {/* <ArrowDropDown /> */}
+                              {/* </Grid> */}
                             </Typography>
-                        </Link>
-                    
-                        <Link href='/jlj'>
-                                <Typography onClick={()=>setOpenTop(false)} textAlign='center' className='text nav-link' variant="body2" component="div" sx={{ flexGrow: 1 }}>
-                                    Events
-                                </Typography>
-                        </Link>
-        
-                        {/*  */}
-                              
-                        <Link href="/login"  component="button">
-                            <div onClick={()=>setOpenTop(false)} className='nav-link'>
-                                <Typography paddingBottom={3} textAlign='center' className='text' variant="body2"  sx={{ flexGrow: 1 }}>
-                                Login
-                                </Typography>
-                            </div>
-                        </Link>
+                            <Menu
+                                id="basic-menu"
+                                anchorEl={anchorEl}
+                                open={openEl}
+                                onClose={handleCloseEl}
+                                MenuListProps={{
+                                'aria-labelledby': 'basic-button',
+                                }}
+                                style={{marginTop:'15px'}}
+                                // classes={{ paper: classes.menuPaper }}
+                            >
+                                <MenuItem onClick={()=>handleSelectFlag(0)}><Image src={Us} height={15} width={20}/>&nbsp;United States</MenuItem>
+                                <MenuItem onClick={()=> handleSelectFlag(1)}><Image src={Uk}/>&nbsp;United Kingdom</MenuItem>
+                                <MenuItem onClick={()=> handleSelectFlag(2)}><Image src={Nig}/>&nbsp;Nigeria</MenuItem>
+                                   
+                            </Menu></Grid>
                     </Drawer>
                 </Grid>
               ) : (

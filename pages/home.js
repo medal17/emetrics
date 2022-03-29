@@ -44,7 +44,7 @@ export default function NigeriaPage() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1> */}
 
-          <Navbar/>
+          <Navbar counrty={2}/>
           {/* </> */}
           <PartnerHero 
             direction='ltr'
