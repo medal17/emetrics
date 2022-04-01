@@ -63,7 +63,7 @@
         },
         {   
             "id":7,
-            "image":5,
+            "image":6,
             "category":"Business",
             "date":"December 18, 2020",
             "title":"Setting up and improving on existing strategic finance function",
@@ -73,7 +73,7 @@
         },
         {   
             "id":8,
-            "image":5,
+            "image":7,
             "category":"Business",
             "date":"December 18, 2020",
             "title":"The role of Artificial Intelligence in driving business process",
@@ -83,7 +83,7 @@
         },
         {   
             "id":9,
-            "image":5,
+            "image":8,
             "category":"Business",
             "date":"December 18, 2020",
             "title":"Gaining Strategic Competitive Advantage",
@@ -93,7 +93,7 @@
         },
         {   
             "id":10,
-            "image":5,
+            "image":9,
             "category":"Business",
             "date":"December 18, 2020",
             "title":"The Consumer Is King",
@@ -103,7 +103,7 @@
         },
         {   
             "id":11,
-            "image":5,
+            "image":10,
             "category":"Business",
             "date":"December 18, 2020",
             "title":"Achieving Maximum Performance through Employee Motivation",
@@ -113,7 +113,7 @@
         },
         {   
             "id":12,
-            "image":5,
+            "image":11,
             "category":"Business",
             "date":"December 18, 2020",
             "title":"Establishing The Right Business Eco-System",

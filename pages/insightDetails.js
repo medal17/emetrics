@@ -1,21 +1,42 @@
-import { Grid, Typography } from "@mui/material";
+import { Divider, Grid, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import {useRouter} from 'next/router';
-import image0 from '../resources/images/0.png';
-import image1 from '../resources/images/1.png';
-import image2 from '../resources/images/2.png';
-import image3 from '../resources/images/3.png';
-import image4 from '../resources/images/4.png';
-import image5 from '../resources/images/5.png';
+import pic0 from '../resources/images/articleCover/0.png';
+import pic1 from '../resources/images/articleCover/1.png';
+import pic2 from '../resources/images/articleCover/2.png';
+import pic3 from '../resources/images/articleCover/3.png';
+import pic4 from '../resources/images/articleCover/4.png';
+import pic5 from '../resources/images/articleCover/5.png';
+import pic6 from '../resources/images/articleCover/6.png';
+import pic7 from '../resources/images/articleCover/7.png';
+import pic8 from '../resources/images/articleCover/8.png';
+import pic9 from '../resources/images/articleCover/9.png';
+import pic10 from '../resources/images/articleCover/10.png';
+import pic11 from '../resources/images/articleCover/11.png';
 import Image from 'next/image'
-import RoundedButton from "../components/Buttons/RoundedButton";
+import InsightCard from "../components/Insights/InsightCard";
+import data from "../resources/data/articles.json";
 import Footer from "../components/Footer";
 import Link from 'next/link'
-import data from '../resources/data/articles.json'
+import HeadText from "../components/HeadText";
 
 
 export default function insightDetails (){
     const route = useRouter()
+    const pics = [
+        {"name":pic0},
+        {"name":pic1},
+        {"name":pic2},
+        {"name":pic3},
+        {"name":pic4},
+        {"name":pic5},
+        {"name":pic6},
+        {"name":pic7},
+        {"name":pic8},
+        {"name":pic9},
+        {"name":pic10},
+        {"name":pic11},
+    ]
     
     return(
         <Grid>
@@ -25,7 +46,7 @@ export default function insightDetails (){
                 <Grid container md={8} justifyContent='space-around'>
                     
                     <Grid container md={12} py={2}>
-                        <Image alt="title-image" width='800px' height='400vh'  src={image5}/>
+                        <Image alt="title-image" width='900px' height='400vh'  src={pics[route.query.id-1].name}/>
                     </Grid>
                     <Grid item md={6}>
                         {data[route.query.id-1].category}
@@ -56,6 +77,26 @@ export default function insightDetails (){
                     </Grid>
                 </Grid>:''}
             </Grid>
+
+            <Divider variant='middle'/>
+            <br/>
+            <Grid container sx={{margin:'0 auto'}}>
+                <HeadText text='Other Articles' size={25}/>
+            </Grid>
+            <Grid sx={{margin:'0 auto'}} container md={8}>
+                    { data.map((e)=>
+                        <InsightCard
+                        id ={e.id} 
+                        image={pics[e.image].name} 
+                        category='Business' 
+                        date={e.author} 
+                        title={e.title}
+                        // body='Oftentimes,organizations award high appraisal based performance ratings/scores to employees based on activities they are involved in and not on the contribution of'
+                        labelBg='#FFF9F2'
+                        labelColor="#ECB16D"
+                    />
+                    )}
+                </Grid>
             <Footer/>
         </Grid>
     )
