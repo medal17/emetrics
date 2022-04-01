@@ -24,18 +24,8 @@ import HeadText from "../components/HeadText";
 export default function insightDetails (){
     const route = useRouter()
     const pics = [
-        {"name":pic0},
-        {"name":pic1},
-        {"name":pic2},
-        {"name":pic3},
-        {"name":pic4},
-        {"name":pic5},
-        {"name":pic6},
-        {"name":pic7},
-        {"name":pic8},
-        {"name":pic9},
-        {"name":pic10},
-        {"name":pic11},
+        {"name":pic0}, {"name":pic1}, {"name":pic2}, {"name":pic3}, {"name":pic4}, {"name":pic5}, {"name":pic6},
+        {"name":pic7}, {"name":pic8}, {"name":pic9}, {"name":pic10}, {"name":pic11},
     ]
     
     return(
@@ -44,9 +34,18 @@ export default function insightDetails (){
             <Grid container justifyContent='center' pt={{md:17}}>
                 {route.query.id ?
                 <Grid container md={8} justifyContent='space-around'>
-                    
-                    <Grid container md={12} py={2}>
-                        <Image alt="title-image" width='900px' height='400vh'  src={pics[route.query.id-1].name}/>
+                    <Grid md={12} container my={2}>
+                        <Typography fontWeight={600} fontSize={25}>
+                            {data[route.query.id-1].title}
+                        </Typography>
+                    </Grid>
+                    <Grid md={12} container my={2}>
+                        <Typography fontSize={15}>
+                            by {data[route.query.id-1].author}
+                        </Typography>
+                    </Grid>
+                    <Grid container md={12} sx={{borderRadius:'20px'}} py={2}>
+                        <Image alt="title-image" width='950px' height='400vh'  src={pics[route.query.id-1].name}/>
                     </Grid>
                     <Grid item md={6}>
                         {data[route.query.id-1].category}
@@ -62,7 +61,7 @@ export default function insightDetails (){
                         </Typography>
                     </Grid>
                     <Grid md={12} container>
-                        <Typography fontSize={16}>
+                        <Typography fontSize={16} textAlign='justify'>
                             {data[route.query.id-1].body}
                         </Typography>
                     </Grid>
@@ -80,21 +79,19 @@ export default function insightDetails (){
 
             <Divider variant='middle'/>
             <br/>
-            <Grid container sx={{margin:'0 auto'}}>
-                <HeadText text='Other Articles' size={25}/>
-            </Grid>
+         
+            <Typography textAlign='center' pb={5} fontWeight={700} fontSize={23}>Other Articles</Typography>
             <Grid sx={{margin:'0 auto'}} container md={8}>
-                    { data.map((e)=>
+                    { data.map((e, index)=>index<6 && e.id != data[route.query.id-1]?
                         <InsightCard
                         id ={e.id} 
                         image={pics[e.image].name} 
                         category='Business' 
                         date={e.author} 
                         title={e.title}
-                        // body='Oftentimes,organizations award high appraisal based performance ratings/scores to employees based on activities they are involved in and not on the contribution of'
                         labelBg='#FFF9F2'
                         labelColor="#ECB16D"
-                    />
+                    />:''
                     )}
                 </Grid>
             <Footer/>

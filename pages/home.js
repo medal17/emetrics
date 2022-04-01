@@ -140,7 +140,7 @@ export default function NigeriaPage() {
             <Grid container justifyContent='center' alignItems='center' mt={2} md={12} px={8}>
                <TeamCard image={db} name='Debo Adebayo' role='Director of Business Operations (EMEA)' />
                <TeamCard image={emma} name='Emmanuel Moses' role='Manager' />
-               <TeamCard image={kemi} name='Kemi Popoola' role='Country Manager' />
+               <TeamCard image={kemi} name='Kemi Okunola' role='Country Manager' />
                {/* <TeamCard image={db} name='Debo Adebayo' role='Country Manager'/> */}
               {/* <Partners image={Sterling}/> */}
             </Grid>
