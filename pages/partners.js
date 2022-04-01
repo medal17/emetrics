@@ -1,4 +1,5 @@
-import { Grid, TextField, Typography } from "@mui/material";
+import { useState } from "react";
+import { Grid, TextField, Typography, FormControl, MenuItem, Select, FormHelperText } from "@mui/material";
 import Navbar from "../components/Navbar";
 import PartnerHero from "../components/Partner/PartnerHero";
 import Image from '../resources/images/partners.png'
@@ -13,6 +14,13 @@ import RoundedButton from '../components/Buttons/RoundedButton'
 import Partners from '../components/Hero/PartenersLogo'
 
 export default function PartnerList(){
+
+  const [age, setAge] = useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
     return(
         <Grid>
             <Navbar/>
@@ -23,6 +31,27 @@ export default function PartnerList(){
                 header='Join Our Growing List of Partners Across the Globe'
                 body='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
             />
+
+            <Grid container md={8}>
+            <FormControl fullWidth sx={{ m: 1, }}>
+                    <Select
+                      value={age}
+                      onChange={handleChange}
+                      displayEmpty
+                      inputProps={{ 'aria-label': 'Without label' }}
+                    >
+                      <MenuItem value="">
+                        <em>Search for Partners by Country</em>
+                      </MenuItem>
+                      <MenuItem value={10}>Us</MenuItem>
+                      <MenuItem value={20}>Uk</MenuItem>
+                      <MenuItem value={30}>Nigeria</MenuItem>
+                      <MenuItem value={30}>Ghana</MenuItem>
+                    </Select>
+                    <FormHelperText>Search for Partner</FormHelperText>
+                  </FormControl>
+                  </Grid>  
+
             <Grid container md={7} sm={12} px={{md:8, sm:1}} p={3} sx={{backgroundColor:'#FBFDFF'}}>
               <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
                 Register to Become a Partner
