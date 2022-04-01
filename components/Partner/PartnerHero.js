@@ -10,17 +10,17 @@ export default function PartnerHero (props){
     return(
         <Grid  container justifyContent='space-around' alignItems='center' my={3}>
             {props.direction =='ltr' && !isMobile  ?
-            <Grid item md={4} sm={12} xs={12} mx={{md:5, sm:2, xs:2}}>
+            <Grid item md={5} sm={12} xs={12} mx={{md:5, sm:2, xs:2}}>
                 <Typography fontWeight={800}  my={2} fontSize={22}>
                      {props.header}
                 </Typography>
-                <Typography fontSize={16}>
+                <Typography textAlign={'justify'} fontSize={16}>
                     {props.body}
                 </Typography>
                 { props.hasButtons ?
                 <Grid container justifyContent='space-around' mt={2} py={2}>
                     <Grid item>
-                        <RoundedButton text='Get Started'/>
+                        <RoundedButton text='Get Started As a Partner'/>
                     </Grid>
                     <Grid item>
                         <Typography fontWeight={800} sx={{color:'#D6B44D'}} fontSize={19}>
@@ -29,14 +29,14 @@ export default function PartnerHero (props){
                     </Grid>
                 </Grid>:''}
             </Grid> :
-            <Grid item md={4}>
-            <Image src={props.image}/>
+            <Grid item md={5}>
+            <Image  src={props.image}/>
             
         </Grid>
             }
             {props.direction =='ltr' && !isMobile
             ?
-            <Grid item md={4}>
+            <Grid item md={5}>
                 <Image src={props.image}/>
                 
             </Grid> :
@@ -44,7 +44,7 @@ export default function PartnerHero (props){
             <Typography fontWeight={800}  my={2} fontSize={22}>
                  {props.header}
             </Typography>
-            <Typography fontSize={16}>
+            <Typography textAlign={'justify'} fontSize={16}>
                 {props.body}
             </Typography>
         </Grid>

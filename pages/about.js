@@ -29,9 +29,9 @@ export default function About (){
                 With Technology'
                 body='Enterprise Metric Suite Solutions LLC is a global business process and performance management solution provider with its international headquarters in DallasTexas, USA.
 
-                In its expansion bid, Enterprise Metric Suite Solutions LLC acquired SPNS Consulting, a Nigeria based consulting firm with strength in business process management, performance management and enterprise transformation.
+                Enterprise Metric Suite Solutions LLC has spread across various countries of the world.
                 
-                We are poised to partner with you towards transforming your business with the joint expertise of the team.'
+                As a duly registered organization in the United States of America, we are poised to partner with you towards transforming your business with the joint expertise of the team.'
                 />
             </Grid>
             

@@ -20,8 +20,8 @@ import Teesas from '../resources/images/teesas.png'
 import Imose from '../resources/images/imose.png'
 import Fbank from '../resources/images/first_bank.png'
 import db from '../resources/images/db1.jpg'
-import Sterling from '../resources/images/sterling_bank.png'
-import Wema from '../resources/images/wema_bank.png'
+import kemi from '../resources/images/kemispns.png'
+import emma from '../resources/images/emma.png'
 import RoundedButton from '../components/Buttons/RoundedButton'
 import Partners from '../components/Hero/PartenersLogo'
 import PartnerHero from '../components/Partner/PartnerHero'
@@ -44,14 +44,14 @@ export default function NigeriaPage() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1> */}
 
-          <Navbar counrty={2}/>
+          <Navbar country={2}/>
           {/* </> */}
           <PartnerHero 
             direction='ltr'
             image={Naija} 
             hasButtons= {true}
-            header='Welcome to E - Metric Suite Nigeria ' 
-            body='Enterprise Metric Suite Solutions LLC is a global business process and performance management solution provider with its international headquarters in DallasTexas, USA. In its expansion bid, Enterprise Metric Suite Solutions LLC acquired SPNS Consulting, a Nigeria based consulting firm with strength in business process management, performance management and enterprise transformation. We are poised to partner with you towards transforming your business with the joint expertise of the team.' />
+            header='Welcome to Enterprise Metric Suite Solutions (Nigeria) ' 
+            body='Enterprise Metric Suite Solutions LLC is a global business process and performance management solution provider with its international headquarters in DallasTexas, USA. In its expansion bid, Enterprise Metric Suite Solutions LLC acquired SPNS Consulting, a Nigeria based consulting firm with strength in business process management, performance management and enterprise transformation. As a duly registered organization in Nigeria, we are poised to partner with you towards transforming your business with the joint expertise of the team.' />
           <Grid container justifyContent='center' my={2} md={6}>
             <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
             Understand KPI Analytics for Productivity
@@ -139,6 +139,8 @@ export default function NigeriaPage() {
             </Grid>
             <Grid container justifyContent='center' alignItems='center' mt={2} md={12} px={8}>
                <TeamCard image={db} name='Debo Adebayo' role='Director of Business Operations (EMEA)' />
+               <TeamCard image={emma} name='Emmanuel Moses' role='Manager' />
+               <TeamCard image={kemi} name='Kemi Popoola' role='Country Manager' />
                {/* <TeamCard image={db} name='Debo Adebayo' role='Country Manager'/> */}
               {/* <Partners image={Sterling}/> */}
             </Grid>
@@ -208,7 +210,7 @@ export default function NigeriaPage() {
       {/* <Grid container sx={{bgcolor:'red'}} md={12}> */}
         <CountryFooter 
           address='5, Adeboye Solanke Avenue, Off Allen Avenue, Ikeja, Lagos' 
-          email='info@emetricsuiteNigeria@gmail.com'
+          email='nigeria@emetricsuite.com'
           phone='+234 708 919 9545, +234 806 541 5059'
           />
       {/* </Grid> */}

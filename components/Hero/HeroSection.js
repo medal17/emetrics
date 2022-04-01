@@ -5,10 +5,12 @@ import { useTheme } from '@mui/material/styles';
 import RoundedButton from '../Buttons/RoundedButton';
 import styles from '../../styles/Home.module.css';
 import Link from 'next/link'
+import {useRouter} from 'next/router'
 
 export default function HeroSection(){
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const route=useRouter()
     console.log(isMobile)
     return(
         isMobile ? 
@@ -22,15 +24,19 @@ export default function HeroSection(){
             </Typography>
             <Typography fontWeight={400}>
             Partnering with you towards transforming your business and 
-            team with our End-to-End performance management and Apprasial software. 
+            team with our end-to-end performance management and Apprasial software. 
             Partnering with you towards transforming your business and team with 
             our End-to-End to Apprasial software. 
 
             </Typography>
             <Grid container justifyContent='space-around' mt={2} py={2}>
-                <Grid item>
-                    <RoundedButton text='Get Started'/>
-                </Grid>
+            {/* <Link href='https://www.calendly.com/emetricsuite'>
+                <a target='_blank'> */}
+                    <Grid item>
+                        <RoundedButton text='Get Started As a Partner' click={()=>route.push('/partners')}/>
+                    </Grid>
+                {/* </a>
+            </Link> */}
 
                 <Link href='https://www.calendly.com/emetricsuite'>
                     <a target='_blank'>
@@ -52,14 +58,14 @@ export default function HeroSection(){
                 </Typography>
                 <Typography fontWeight={400}>
                 Partnering with you towards transforming your business and 
-                team with our End-to-End performance management and Apprasial software. 
+                team with our end-to-end performance management and Apprasial software. 
                 Partnering with you towards transforming your business and team with 
                 our End-to-End to Apprasial software. 
 
                 </Typography>
                 <Grid container justifyContent='space-around' mt={2} py={2}>
                     <Grid item>
-                        <RoundedButton text='Get Started'/>
+                        <RoundedButton text='Get Started As a Partner' click={()=>route.push('/partners')}/>
                     </Grid>
 
                     <Link href='https://www.calendly.com/emetricsuite'>

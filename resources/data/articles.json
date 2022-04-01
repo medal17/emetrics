@@ -1,0 +1,124 @@
+[
+        {   
+            "id":1,
+            "image":0,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"DIGITAL TRANSFORMATION WITH X-RAY",
+            "author":"Khurram Butt",
+            "body": "<b>How Process Mining will take your business intelligence further!</b>  As humans, we are perceptible to subjectivity.  This obstructs our ability to draw an exact and precise picture of a business process when defining the 'as-is' state. Whereas given that computers are very good at executing millions of operations per second, can be automated to our needs. And we've got good at getting them to do so. Then, if you could put a combination of human intelligence and computer's ability to perform complex tasks, analyzing business processes to generate detailed reports from the data collected in your organization's databases to get crucial insights about your large enterprise. Does that sound like business intelligence? Perhaps process analytics? Business Process. Intelligent Analysis. Process analytics and business intelligence can seem to overlap each other in terms of expectations. Although their underlying methodologies and results stand in stark contrast, but nevertheless it demonstrates an important co-relation. From a management perspective, BI enables you to collect business data, find information primarily through reporting, operational processes and various standard channels. Whereas process analytics, on the other hand, uses statistical and quantitative tools allowing diagnosis functionality via process mining methodology. Process mining enables you to perform analysis activities (i.e. influence analysis, variation/path analysis) aided with real-time operational modelling, derived from factual data to identify locked performance potential, allowing operational efficiency and cost saving optimizations. This enables the management to drive fact-based decision making to improve  processes, learn about bottlenecks, minimize costs to improve efficiency, understand unpredictable delivery chains or unreliable partners. These are clear and concise actions when executives deliver concrete benefits. This is a huge step up from merely measuring and monitoring targets as part of BI activities. Overall, process mining is meaningful empowerment.",
+            "url" : "/Articles/digital Trasnformation xray.pdf"
+        },
+    
+        {   
+            "id":2,
+            "image":1,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"Radical Thinking for Growth",
+            "author":"KEHINDE JODA",
+            "body":"In the last edition of BPPR we examined the thread that \n links history Geniuses by examining productive and reproductive thinking since it was not high intelligence quotient. In this conclusion, we will be looking at the path to growth. In Peter Drucker’s book “Innovation and entrepreneurship”, he outlined seven sources of innovative opportunities. As we examine this seven sources it is to the credit of the author that he was able to write not only theoretically but with the practitioner in mind. 1. The unexpected – An unexpected success, failure or outside event can signal that a unique opportunity is presenting itself. 2. The incongruity - A discrepancy between reality and what everyone assumes reality is, or between what is and what ought to be, can create an innovative opportunity if it can be seen. 3. Innovation based on process need – When there is a weak link evident in a particular process but people choose to work around the issue instead of addressing it, then, there is an opportunity available to those who can find a solution. 5. Demographics - Changes in the population size, age, employment, level of education, income or cultural makeup can create innovative opportunities. This is particularly relevant when understanding the increasing globalized economy and intercultural nature of the markets and workforce. 6. Changes in perception, mood and meaning - Innovative opportunities can develop when a society's general assumptions, attitudes and beliefs change. This is also linked to globalization and the rise of the postmodern (or post postmodern?) society. 7. New knowledge - When there are advances in scientific and non-scientific knowledge, there is the opportunity to create new products and new markets. hanges in industry or market structure – The opportunity for an innovative product, service or business approach occurs when the foundation of an industry or market shifts. ",
+            "url":"/Articles/Radical Thinking.pdf"
+        },  
+    
+        {   
+            "id":3,
+            "image":2,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"MARKETING YOUR BUSINESS TO GREATER HEIGHTS",
+            "author":"Tony Agenmonmen", 
+            "body" : "Nearly every beginner in marketing can recite the definition of this popular profession and then proceed from there to roll out the famous Ps of marketing. It used to be 4 in the early days of Philip Kotler, but have now multiplied to be 7. Who knows tomorrow there could yet be more Ps. Shows how much the world is changing, and marketing too! Regardless, the marketing department has and will continue to be the engine room of any truly marketing organisation. ",
+            "url" : "/Articles/Marketing your business.pdf"
+        },
+        {   
+            "id":4,
+            "image":3,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"PROCESS, PERFORMANCE & PSYCHOLOGY",
+            "author":"Sam Obafemi",
+            "body": " When I started my business, I was not sure which of my passionate niche I should project. I was very sound with business processes and strategies and yet also very passionate about therapy and coaching. So I was in a dilemma. It took me a journey in business of about 5 years, before I found that there is a direct correlation between the subtle domain of therapies and the nervous domain of business processes. If business processes are the nervous system of any enterprise, then therapies are the arteries and veins of these ente-rprises.",
+            "url" : "/Articles/PROCEE, PERFORMANCE & pSYCHOLOGY.pdf"
+        },
+        {   
+            "id":5,
+            "image":4,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"To Improve Customer Experience, Improve Employee Engagement",
+            "author":"Robert-Ebers",
+            "body":"An organization’s commitment to having a complete set of service-profit analytics at the decision-making table is vital to productivity and performance improvement and will determine its long-term organizational success. This holds true regardless of industry sector. This article sets out how effective employee engagement can be achieved to fulfill the promise of the people-service-profit connection. It draws upon a for-profit case study of a growing dealer network organization who discovered compelling data from an employee engagement survey. Decisive insights which helped them to better engage their employees and give them a real say and a real stake in the company which in turn lead to solutions which systemically improved the customer experience. ",
+            "url" : "/Articles/to Improve.pdf"
+        },
+        {   
+            "id":6,
+            "image":5,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"Staff productivity",
+            "author": "Buchi Nwosu",
+            "body": "Research on thousands of initiatives shows a direct correlation between how well the people side of change is managed (change management) and how successful the effort is. Projects with improved change management had increased likelihood of meeting objectives, finishing on time and finishing on budget. ",
+            "url" :"/Articles/Staff Productivity.pdf"
+        },
+        {   
+            "id":7,
+            "image":5,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"Setting up and improving on existing strategic finance function",
+            "author":"Mathabatha Tshepiso",
+            "body" : "The role of accountants is shifting from traditional bean counters to more of strategy custodians and technical business advisors. As such accountants must be actively involved in any organisational strategy formulation and implementation. For an organization to succeed in the global and competitive world, it needs to have a robust strategic plan in place. The strategic plan is made of several definite targets it aspires to achieve. Some of the targets are internal as well as external.",
+            "url":"/Articles/setting up.pdf"
+        },
+        {   
+            "id":8,
+            "image":5,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"The role of Artificial Intelligence in driving business process",
+            "author":"MATHABATHA TSHEPISO",
+            "body":"Information Technology (IT) and Systems (IS) has involved extensively that it changed the business operations and processes landscapes. Such evolution introduced concept such as Artificial Intelligence (AI), Business Intelligence (BI), and -En terprise Resource Planning (ERP) etc. This concept when deployed effectively and efficiently, can potential transform any organization’s operational efficiency and impacting on the bottom line, profitability.",
+            "url":"/Articles/role of Ai.pdf"
+        },
+        {   
+            "id":9,
+            "image":5,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"Gaining Strategic Competitive Advantage",
+            "author":"Lere Baale", 
+            "body" : "every organization, business, large or small, needs a strategic competitive advantage to distinguish itself from the competition. In the aggressive business world, especially in today’s economy, every advantage counts to establish your business in the top of your industry. Gaining a competitive advantage takes strategic planning, extensive research and an investment in marketing",
+            "url":"/Articles/Gaining Strategic.pdf"
+        },
+        {   
+            "id":10,
+            "image":5,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"The Consumer Is King",
+            "author":"TONY AGENMOMEN",
+            "body": "I believe many people including non-marketers have heard the phrase, an old mantra that the consumer is king. The phrase is used so many times consciously or unconsciously. Not very surprising therefore that it has taken on the toga of a cliché. In an unusual economy like Nigeria, it can be quite tempting to challenge this concept of the Consumer King. With the frequency of “Oga if you don’t want to buy, go” that one hears every now and then, it is possible to ask where is the kings",
+            "url":"/Articles/consumer is King.pdf"
+        },
+        {   
+            "id":11,
+            "image":5,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"Achieving Maximum Performance through Employee Motivation",
+            "author":"Sam Obafemi",
+            "body": "In recent times, the business has gotten to the brink of losing more customers than ev-er be cause it seemed like the gaps that were unseen suddenly became largely widened. Invoices were being misquoted, garments were being misplaced, customers were notified with wrong balances, etc. This was a harrowing period for the elite brand. Then I stepped in to help. ",
+            "url":"/Articles/Achievement.pdf"
+        },
+        {   
+            "id":12,
+            "image":5,
+            "category":"Business",
+            "date":"December 18, 2020",
+            "title":"Establishing The Right Business Eco-System",
+            "author":"Victor Akunna",
+            "body": "It is rare to find African companies that are over a 100 years old. This is largely because of myriads of factors, but one key fact is that many entrepreneurs value relationships more than systems. Relationships are very important, no doubt, that is how we survive and get many opportunities in Nigeria. However, any entrepreneur who desires to have a business that would run independent of him, giving him the much needed time to be with his family, travel for up to a month on vacation without any panic attacks must learn to build business systems and processes.",
+            "url":"/Articles/Establishing.pdf"
+        }
+    ]

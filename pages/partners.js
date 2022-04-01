@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, TextField, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import PartnerHero from "../components/Partner/PartnerHero";
 import Image from '../resources/images/partners.png'
@@ -20,10 +20,20 @@ export default function PartnerList(){
                 <PartnerHero
                 direction='ltr'
                 image={Image}
-                header='Join Our Growing List of Partners Accross the Globe'
+                header='Join Our Growing List of Partners Across the Globe'
                 body='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
             />
-
+            <Grid container md={7} sm={12} px={{md:8, sm:1}} p={3} sx={{backgroundColor:'#FBFDFF'}}>
+              <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
+                Register to Become a Partner
+              </Typography>
+              <TextField label='Email' placeholder='Email' type={'email'} fullWidth sx={{marginY:1, backgroundColor:'#fff'}}/> <br/>
+              <TextField label='Country' placeholder='Country' type={'email'} fullWidth sx={{marginY:1, backgroundColor:'#fff'}}/> <br/>
+              <TextField label='Phone Number' placeholder='Phone Number' type={'number'} fullWidth sx={{marginY:1, backgroundColor:'#fff'}}/> <br/>
+              <TextField label='Organization Name' placeholder='Organization Name' type={'text'} fullWidth sx={{marginY:1, backgroundColor:'#fff'}}/> <br/>
+              <TextField label='Designation' placeholder='Designation' type={'text'} fullWidth sx={{marginY:1, backgroundColor:'#fff'}}/>
+              <RoundedButton text='Submit'  />
+            </Grid>
             <Grid container justifyContent='space-around' my={2} md={6}>
                 <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
                 Understand KPI Analytics for Productivity
@@ -49,9 +59,9 @@ export default function PartnerList(){
               <Partners image={Wema}/>
               <Partners image={Rplus}/>
               <Partners image={Wema}/>
-              <Partners image={Sterling}/>
+              {/* <Partners image={Sterling}/> */}
             </Grid>
-
+            
           </Grid>
             </Grid>
             <Footer/>
