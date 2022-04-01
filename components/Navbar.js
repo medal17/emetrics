@@ -10,6 +10,7 @@ import Logo from '../resources/images/emetric.png'
 import Nig from '../resources/images/Nigeria.png'
 import Us from '../resources/images/Us.png'
 import Uk from '../resources/images/Uk.png'
+import Gh from '../resources/images/ghana.png'
 import {useRouter} from 'next/router'
 import {IoMenu, IoClose} from 'react-icons/io5'
 import {} from 'react-icons/vsc'
@@ -52,7 +53,7 @@ const Navbar = (props) => {
 
 const handleSelectFlag =(value)=>{
   setFlag(value);
-  value ==2 ? route.push('/home') : (value==1 ? route.push('/ukHome') : route.push('/'))
+  value ==2 ? route.push('/home') : (value==1 ? route.push('/ukHome') : (value==3 ? route.push('/ghana'):''))
   setAnchorEl(null)
 }
 
@@ -172,7 +173,7 @@ const [anchorS, setAnchorS] = useState(null);
                             
                             <Typography ml={3}  id="demo-positioned-menu" px={2} onClick={handleClick}  className='text nav-link' variant="body2" component="div" >
                               {/* <Grid className='text' container style={{bgcolor:'red'}}  justifyContent='center'>    */}
-                                  <Image src={flag ==0 ? Us : (flag==1 ?Uk :Nig)} height={26} width={36} />
+                              <Image src={flag ==0 ? Us : (flag==1 ?Uk :(flag==2 ?Nig:(flag==3?Gh:'')))} height={26} width={36} />
                               {/* <ArrowDropDown /> */}
                               {/* </Grid> */}
                             </Typography>
@@ -190,6 +191,7 @@ const [anchorS, setAnchorS] = useState(null);
                                 <MenuItem onClick={()=>handleSelectFlag(0)}><Image src={Us} height={15} width={20}/>&nbsp;United States</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(1)}><Image src={Uk}/>&nbsp;United Kingdom</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(2)}><Image src={Nig}/>&nbsp;Nigeria</MenuItem>
+                                <MenuItem onClick={()=> handleSelectFlag(2)}><Image src={Nig}/>&nbsp;Ghana</MenuItem>
                                    
                             </Menu></Grid>
                     </Drawer>
@@ -279,7 +281,7 @@ const [anchorS, setAnchorS] = useState(null);
                         
                             <Typography ml={3}  id="demo-positioned-menu" px={2} onClick={handleClick}  className='text nav-link' variant="body2" component="div" >
                               {/* <Grid className='text' container style={{bgcolor:'red'}}  justifyContent='center'>    */}
-                                  <Image src={flag ==0 ? Us : (flag==1 ?Uk :Nig)} height={26} width={36} />
+                                  <Image src={flag ==0 ? Us : (flag==1 ?Uk :(flag==2 ?Nig:(flag==3?Gh:'')))} height={26} width={36} />
                               {/* <ArrowDropDown /> */}
                               {/* </Grid> */}
                             </Typography>
@@ -297,6 +299,7 @@ const [anchorS, setAnchorS] = useState(null);
                                 <MenuItem onClick={()=>handleSelectFlag(0)}><Image src={Us} height={15} width={20}/>&nbsp;United States</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(1)}><Image src={Uk}/>&nbsp;United Kingdom</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(2)}><Image src={Nig}/>&nbsp;Nigeria</MenuItem>
+                                <MenuItem onClick={()=> handleSelectFlag(3)}><Image src={Gh} height={29} width={23} />&nbsp;Ghana</MenuItem>
                                    
                             </Menu>
                         </Toolbar>
