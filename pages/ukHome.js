@@ -15,15 +15,10 @@ import StatsImage from '../resources/images/stats.png'
 import GraphImage from '../resources/images/graph.png'
 import BagBg from '../resources/background/bagBg.png'
 import BagImage from '../resources/images/Emoji.png'
-import Rplus from '../resources/images/rplus.png'
-import Teesas from '../resources/images/teesas.png'
-import Imose from '../resources/images/imose.png'
-import Fbank from '../resources/images/first_bank.png'
 import richie from '../resources/images/richie.jpg'
-import Sterling from '../resources/images/sterling_bank.png'
-import Wema from '../resources/images/wema_bank.png'
+import bob from '../resources/images/Robert-Ebers.jpg'
+import db from '../resources/images/db1.jpg'
 import RoundedButton from '../components/Buttons/RoundedButton'
-import Partners from '../components/Hero/PartenersLogo'
 import PartnerHero from '../components/Partner/PartnerHero'
 import TeamCard from '../components/About/TeamCard'
 
@@ -50,12 +45,9 @@ export default function UkPage() {
             direction='ltr'
             image={uk} 
             hasButtons= {true}
-            header='Welcome to E - Metric Suite United Kingdom' 
+            header='Welcome to Enterprise Metric Suite Solutions LLC (United Kingdom)' 
             body='Enterprise Metric Suite Solutions LLC is a global business process and performance management solution provider with its international headquarters in DallasTexas, USA.
-
-            In its expansion bid, Enterprise Metric Suite Solutions LLC acquired SPNS Consulting, a Nigeria based consulting firm with strength in business process management, performance management and enterprise transformation.
-            
-            We are poised to partner with you towards transforming your business with the joint expertise of the team.' 
+            As a duly registered organization in the United Kingdom, we are poised to partner with you towards transforming your business with the joint expertise of the team.' 
             />
           <Grid container justifyContent='center' my={2} md={6}>
             <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
@@ -143,9 +135,11 @@ export default function UkPage() {
               </Typography>
             </Grid>
             <Grid container justifyContent='center' alignItems='center' mt={2} md={12} px={8}>
-               <TeamCard image={richie} name='Martin Baillie' role='Director of Business Operations' />
-               {/* <TeamCard image={db} name='Debo Adebayo' role='Country Manager'/> */}
-              {/* <Partners image={Sterling}/> */}
+               <TeamCard image={bob} name='Robert P. Ebers' role='Chief Executive Officer'/>
+               <TeamCard image={db} name='Debo Adebayo' role='Regional Manager'/>
+               <TeamCard image={richie} name='Martin Baillie' role='Country Manager' />
+               
+               
             </Grid>
 
           </Grid>
@@ -179,7 +173,7 @@ export default function UkPage() {
       {/* <Grid container sx={{bgcolor:'red'}} md={12}> */}
         <CountryFooter 
           address='9304 Forest lane, Suite S207 Dallas, Texas 75243' 
-          email='info@emetricsuiteUk.com'
+          email='uk@emetricsuite.com'
           phone='+1 (504) 499-5921'
           />
       {/* </Grid> */}
