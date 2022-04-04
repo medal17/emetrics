@@ -20,8 +20,8 @@ import Teesas from '../resources/images/teesas.png'
 import Imose from '../resources/images/imose.png'
 import Fbank from '../resources/images/first_bank.png'
 import db from '../resources/images/db1.jpg'
-import kemi from '../resources/images/Kemispns.png'
-import emma from '../resources/images/emma.png'
+import richie from '../resources/images/richie.jpg'
+import bob from '../resources/images/Robert-Ebers.jpg'
 import RoundedButton from '../components/Buttons/RoundedButton'
 import Partners from '../components/Hero/PartenersLogo'
 import PartnerHero from '../components/Partner/PartnerHero'
@@ -44,7 +44,7 @@ export default function UsPage() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1> */}
 
-          <Navbar country={2}/>
+          <Navbar country={4}/>
           {/* </> */}
           <PartnerHero 
             direction='ltr'
@@ -138,11 +138,9 @@ export default function UsPage() {
               </Typography>
             </Grid>
             <Grid container justifyContent='center' alignItems='center' mt={2} md={12} px={8}>
-               <TeamCard image={db} name='Debo Adebayo' role='Director of Business Operations (EMEA)' />
-               <TeamCard image={emma} name='Emmanuel Moses' role='Manager' />
-               <TeamCard image={kemi} name='Kemi Okunola' role='Country Manager' />
-               {/* <TeamCard image={db} name='Debo Adebayo' role='Country Manager'/> */}
-              {/* <Partners image={Sterling}/> */}
+              <TeamCard image={bob} name='Robert P. Ebers' role='Chief Executive Officer'/> 
+              <TeamCard image={db} name='Debo Adebayo' role='Director of Business Operations (EMEA)'/>
+              <TeamCard image={richie} name='Martin Baillie' role='Director of Business Operations (Europe Market)'/>
             </Grid>
 
           </Grid>

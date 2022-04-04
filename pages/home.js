@@ -21,6 +21,7 @@ import Imose from '../resources/images/imose.png'
 import Fbank from '../resources/images/first_bank.png'
 import db from '../resources/images/db1.jpg'
 import kemi from '../resources/images/Kemispns.png'
+import sharon from '../resources/images/sharon.png'
 import emma from '../resources/images/emma.png'
 import RoundedButton from '../components/Buttons/RoundedButton'
 import Partners from '../components/Hero/PartenersLogo'
@@ -138,9 +139,10 @@ export default function NigeriaPage() {
               </Typography>
             </Grid>
             <Grid container justifyContent='center' alignItems='center' mt={2} md={12} px={8}>
-               <TeamCard image={db} name='Debo Adebayo' role='Director of Business Operations (EMEA)' />
-               <TeamCard image={emma} name='Emmanuel Moses' role='Manager' />
+               <TeamCard image={db} name='Debo Adebayo' role='Director, EMEA Business ' />
                <TeamCard image={kemi} name='Kemi Okunola' role='Country Manager' />
+               <TeamCard image={emma} name='Emmanuel Moses' role='Director, African Business' />
+               <TeamCard image={sharon} name='Sharon Onyeneke' role='Director Channel and Development Africa'/>
                {/* <TeamCard image={db} name='Debo Adebayo' role='Country Manager'/> */}
               {/* <Partners image={Sterling}/> */}
             </Grid>

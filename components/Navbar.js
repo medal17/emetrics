@@ -53,7 +53,7 @@ const Navbar = (props) => {
 
 const handleSelectFlag =(value)=>{
   setFlag(value);
-  value ==2 ? route.push('/home') : (value==1 ? route.push('/ukHome') : (value==3 ? route.push('/ghana'):''))
+  value ==2 ? route.push('/home') : (value==1 ? route.push('/ukHome') : (value==3 ? route.push('/ghana'):(value==4 ? route.push('/Us'):route.push('/'))))
   setAnchorEl(null)
 }
 
@@ -173,7 +173,7 @@ const [anchorS, setAnchorS] = useState(null);
                             
                             <Typography ml={3}  id="demo-positioned-menu" px={2} onClick={handleClick}  className='text nav-link' variant="body2" component="div" >
                               {/* <Grid className='text' container style={{bgcolor:'red'}}  justifyContent='center'>    */}
-                              <Image src={flag ==0 ? Us : (flag==1 ?Uk :(flag==2 ?Nig:(flag==3?Gh:'')))} height={26} width={36} />
+                              <Image src={flag ==0 ? Us : (flag==1 ?Uk :(flag==2 ?Nig:(flag==3?Gh:(flag==4?Us:''))))} height={26} width={36} />
                               {/* <ArrowDropDown /> */}
                               {/* </Grid> */}
                             </Typography>
@@ -188,10 +188,11 @@ const [anchorS, setAnchorS] = useState(null);
                                 style={{marginTop:'15px'}}
                                 // classes={{ paper: classes.menuPaper }}
                             >
-                                <MenuItem onClick={()=>handleSelectFlag(0)}><Image src={Us} height={15} width={20}/>&nbsp;United States</MenuItem>
+                                <MenuItem onClick={()=>handleSelectFlag(0)}><Image src={Us} height={15} width={20}/>&nbsp;General</MenuItem>
+                                <MenuItem onClick={()=>handleSelectFlag(4)}><Image src={Us} height={15} width={20}/>&nbsp;United States</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(1)}><Image src={Uk}/>&nbsp;United Kingdom</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(2)}><Image src={Nig}/>&nbsp;Nigeria</MenuItem>
-                                <MenuItem onClick={()=> handleSelectFlag(2)}><Image src={Nig}/>&nbsp;Ghana</MenuItem>
+                                <MenuItem onClick={()=> handleSelectFlag(3)}><Image src={Nig}/>&nbsp;Ghana</MenuItem>
                                    
                             </Menu></Grid>
                     </Drawer>
@@ -281,7 +282,7 @@ const [anchorS, setAnchorS] = useState(null);
                         
                             <Typography ml={3}  id="demo-positioned-menu" px={2} onClick={handleClick}  className='text nav-link' variant="body2" component="div" >
                               {/* <Grid className='text' container style={{bgcolor:'red'}}  justifyContent='center'>    */}
-                                  <Image src={flag ==0 ? Us : (flag==1 ?Uk :(flag==2 ?Nig:(flag==3?Gh:'')))} height={26} width={36} />
+                                  <Image src={flag ==0 ? Us : (flag==1 ?Uk :(flag==2 ?Nig:(flag==3?Gh:(flag==4?Us:''))))} height={26} width={36} />
                               {/* <ArrowDropDown /> */}
                               {/* </Grid> */}
                             </Typography>
@@ -296,7 +297,8 @@ const [anchorS, setAnchorS] = useState(null);
                                 style={{marginTop:'15px'}}
                                 // classes={{ paper: classes.menuPaper }}
                             >
-                                <MenuItem onClick={()=>handleSelectFlag(0)}><Image src={Us} height={15} width={20}/>&nbsp;United States</MenuItem>
+                                <MenuItem onClick={()=>handleSelectFlag(0)}><Image src={Us} height={15} width={20}/>&nbsp;General</MenuItem>
+                                <MenuItem onClick={()=>handleSelectFlag(4)}><Image src={Us} height={15} width={20}/>&nbsp;United States</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(1)}><Image src={Uk}/>&nbsp;United Kingdom</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(2)}><Image src={Nig}/>&nbsp;Nigeria</MenuItem>
                                 <MenuItem onClick={()=> handleSelectFlag(3)}><Image src={Gh} height={29} width={23} />&nbsp;Ghana</MenuItem>
