@@ -10,7 +10,7 @@ import {BiCheckDouble} from 'react-icons/bi'
 import {ImPieChart} from 'react-icons/im'
 import FeatureExpand from '../components/Hero/FeatureExpand'
 import MapImage from '../resources/images/map.png'
-import Naija from '../resources/images/Naija.png'
+import partner from '../resources/images/partners.png'
 import StatsImage from '../resources/images/stats.png'
 import GraphImage from '../resources/images/graph.png'
 import BagBg from '../resources/background/bagBg.png'
@@ -48,7 +48,7 @@ export default function UsPage() {
           {/* </> */}
           <PartnerHero 
             direction='ltr'
-            image={Naija} 
+            image={partner} 
             hasButtons= {true}
             header='Welcome to Enterprise Metric Suite Solutions Limited LLC (United States) ' 
             body='Enterprise Metric Suite Solutions LLC is a global business process and performance management solution provider with its international headquarters in DallasTexas, USA. In its expansion bid, Enterprise Metric Suite Solutions LLC acquired SPNS Consulting, a Nigeria based consulting firm with strength in business process management, performance management and enterprise transformation. As a duly registered organization in Nigeria, we are poised to partner with you towards transforming your business with the joint expertise of the team.' />

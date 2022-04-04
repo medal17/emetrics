@@ -52,7 +52,7 @@ export default function NigeriaPage() {
             image={Naija} 
             hasButtons= {true}
             header='Welcome to Enterprise Metric Suite Solutions (Nigeria) ' 
-            body='Enterprise Metric Suite Solutions LLC is a global business process and performance management solution provider with its international headquarters in DallasTexas, USA. In its expansion bid, Enterprise Metric Suite Solutions LLC acquired SPNS Consulting, a Nigeria based consulting firm with strength in business process management, performance management and enterprise transformation. As a duly registered organization in Nigeria, we are poised to partner with you towards transforming your business with the joint expertise of the team.' />
+            body='Enterprise Metric Suite Solutions Limited (Nigeria) is a representative of Enterprise Metric Suite Solutions LLC in Nigeria. Enterprise Metric Suite Solutions LLC is a global business process and performance management solution provider with its international headquarters in DallasTexas, USA. In its expansion bid, Enterprise Metric Suite Solutions LLC acquired SPNS Consulting, a Nigeria based consulting firm with strength in business process management, performance management and enterprise transformation. As a duly registered organization in Nigeria, we are poised to partner with you towards transforming your business with the joint expertise of the team.' />
           <Grid container justifyContent='center' my={2} md={6}>
             <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
             Understand KPI Analytics for Productivity
