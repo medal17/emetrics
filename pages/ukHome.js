@@ -136,8 +136,9 @@ export default function UkPage() {
             </Grid>
             <Grid container justifyContent='center' alignItems='center' mt={2} md={12} px={8}>
                <TeamCard image={bob} name='Robert P. Ebers' role='Chief Executive Officer'/>
-               <TeamCard image={db} name='Debo Adebayo' role='Regional Manager'/>
                <TeamCard image={richie} name='Martin Baillie' role='Country Manager' />
+               <TeamCard image={db} name='Debo Adebayo' role='Regional Manager'/>
+               
                
                
             </Grid>
