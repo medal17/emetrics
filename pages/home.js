@@ -142,7 +142,7 @@ export default function NigeriaPage() {
                <TeamCard image={db} name='Debo Adebayo' role='Director, EMEA Business ' />
                <TeamCard image={kemi} name='Kemi Okunola' role='Country Manager' />
                <TeamCard image={emma} name='Emmanuel Moses' role='Director, African Business' />
-               <TeamCard image={sharon} name='Sharon Onyeneke' role='Director Channel and Development Africa'/>
+               <TeamCard image={sharon} name='Sharon Onyeneke' role='Manager, Channel Development (Africa)'/>
                {/* <TeamCard image={db} name='Debo Adebayo' role='Country Manager'/> */}
               {/* <Partners image={Sterling}/> */}
             </Grid>

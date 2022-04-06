@@ -59,11 +59,13 @@ export default function PartnerList(){
           setMessage('Mail Sent Successfully')
           setError(false)
           console.log(result.text);
+
           setChange({"email":'',
             "country":'',
             "phone" :'',
             "oganization":'',
             "designation":''})
+            
       }, (error) => {
           console.log(error.text);
           setMessage('Mail Not Sent')
