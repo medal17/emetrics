@@ -26,32 +26,32 @@ export default function Footer (){
                         Contact Us
                         </Typography>
 
-                    <Link href="https://www.twitter.com" underline="always">
+                    
                         <Grid container className='nav-link'>
                         {/* <Twitter/>  */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  className='text'   variant='body2' marginBottom={2}> 
                             9304 Forest lane, Suite S207 Dallas, Texas 75243
                         </Typography>
                         </Grid>
-                    </Link>
+                    
 
 
-                    <Link  href="https://www.linkedin.com" underline="always">
+                    
                         <Grid container  className='nav-link' >
                         {/* <LinkedIn marginTop={2} /> */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text ' variant='body2' marginBottom={2}>
                         Email : info@emetricsuite.com</Typography>
                         </Grid>
-                    </Link>
+                    
 
-                    <Link href="https://www.facebook.com" underline="always">
+                    
                         <Grid container className='nav-link'>
                         {/* <Facebook marginTop={2}/> */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' variant='body2' marginBottom={2}>
                         Contact : +1 (504) 499-5921
                         </Typography>
                         </Grid>
-                    </Link>
+                   
                     </Grid>
 
                 {/* //Social Media Group 2 */}

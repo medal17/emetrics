@@ -207,9 +207,9 @@ export default function UsPage() {
       <footer >
       {/* <Grid container sx={{bgcolor:'red'}} md={12}> */}
         <CountryFooter 
-          address='5, Adeboye Solanke Avenue, Off Allen Avenue, Ikeja, Lagos' 
-          email='nigeria@emetricsuite.com'
-          phone='+234 708 919 9545, +234 806 541 5059'
+          address='9304 Forest lane, Suite S207 Dallas, Texas 75243' 
+          email='us@emetricsuite.com'
+          phone='+1 (504) 499-5921'
           />
       {/* </Grid> */}
       </footer>
