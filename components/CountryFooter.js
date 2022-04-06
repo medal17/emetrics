@@ -26,32 +26,32 @@ export default function CountryFooter (props){
                         Contact Us
                         </Typography>
 
-                    <Link href="https://www.twitter.com" underline="always">
+                    {/* <Link href="https://www.twitter.com" underline="always"> */}
                         <Grid container className='nav-link'>
                         {/* <Twitter/>  */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}}  className='text'   variant='body2' marginBottom={2}> 
                             {props.address}
                         </Typography>
                         </Grid>
-                    </Link>
+                    {/* </Link> */}
 
 
-                    <Link  href="https://www.linkedin.com" underline="always">
+                    {/* <Link  href="https://www.linkedin.com" underline="always"> */}
                         <Grid container  className='nav-link' >
                         {/* <LinkedIn marginTop={2} /> */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text ' variant='body2' marginBottom={2}>
                         Email : {props.email}</Typography>
                         </Grid>
-                    </Link>
+                    {/* </Link> */}
 
-                    <Link href="https://www.facebook.com" underline="always">
+                    {/* <Link href="https://www.facebook.com" underline="always"> */}
                         <Grid container className='nav-link'>
                         {/* <Facebook marginTop={2}/> */}
                         <Typography textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' variant='body2' marginBottom={2}>
                         Contact : {props.phone}
                         </Typography>
                         </Grid>
-                    </Link>
+                    {/* </Link> */}
                     </Grid>
 
                 {/* //Social Media Group 2 */}
@@ -141,7 +141,7 @@ export default function CountryFooter (props){
                 <br/>
                 <br/>
                 <Grid justifyContent='space-around' container mt={2}>
-                    <Typography textAlign='center' textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' sx={{ color: "black" }}>
+                    <Typography  textAlign={{xs:'center', sm:'left',lg:'left', md:'left'}} className='text' sx={{ color: "black" }}>
                         &copy; {new Date().getFullYear()} All rights reserved.
                     </Typography>
                 </Grid>

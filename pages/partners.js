@@ -21,6 +21,7 @@ export default function PartnerList(){
   const [country, setCountry] = useState('')
   const [loading, setLoading] = useState(false)
   const [onChange, setChange] = useState({
+    "name":'',
     "email":'',
     "country":'',
     "phone" :'',
@@ -60,7 +61,9 @@ export default function PartnerList(){
           setError(false)
           console.log(result.text);
 
-          setChange({"email":'',
+          setChange({
+            "name":'',
+            "email":'',
             "country":'',
             "phone" :'',
             "oganization":'',
@@ -78,26 +81,6 @@ export default function PartnerList(){
     }
   } 
 
-  console.log(onChange)
-  // const client = new SMTPClient({
-  //   user: 'partners@emetricsuite.com',
-  //   password: 'Backup2020',
-  //   host: 'smtp.partners@emetricsuite.com',
-  //   ssl: true,
-  // });
-
-  // client.send(
-  //   {
-  //     text: 'i hope this works',
-  //     from: '<gen2soul419@gmail.com>',
-  //     to: '<iyandaadeshina@gmail.com>',
-  //     subject: 'testing emailjs',
-  //   },
-  //   (err, message) => {
-  //     console.log(err || message);
-  //   }
-  // );
-  
 
     return(
         <Grid>
@@ -110,40 +93,10 @@ export default function PartnerList(){
                 body='Join our growing list of partners across the globe and stand the chance of becoming our country representative in your country. This position offers you the opportunity of working in one of the fastest growing organization in the performance management industry. Our partners are technically referred to as Value Added Partners (VAP). As a VAP, you are expected to market the solution to companies in your country, make demo presentations, follow up on them for sales, help with deployment and ultimately manage the clients.'
             />
 
-            <Grid container md={7} sm={12} px={{md:8, sm:1}} p={3} sx={{backgroundColor:'#FBFDFF'}}>
-             
-              <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
-                Register to Become a Partner
-              </Typography> 
-              <Grid container>
-                {message && error ?<Typography color='red'>{message}</Typography>:(message && !error ?<Typography color='green'>{message}</Typography>:'')}
-              </Grid>
-              <TextField label='Email' placeholder='Email' type={'email'} name='email' onChange={handleForm} value={onChange.email} fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
-              <TextField label='Country' placeholder='Country' type={'email'} name='country' value={onChange.country} onChange={handleForm} fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
-              <TextField label='Phone Number' placeholder='Phone Number' type={'number'} value={onChange.phone} onChange={handleForm} name='phone' fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
-              <TextField label='Organization Name' placeholder='Organization Name' value={onChange.organization} onChange={handleForm} type={'text'} name='organization' fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
-              <TextField label='Designation' placeholder='Designation' value={onChange.designation} type={'text'} onChange={handleForm} name='designation' fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required />
-              
-              { loading ?
-               <Grid sx={{bgcolor:'#031842'}} px={5} borderRadius={2} py={1}> 
-                <CircularProgress size={18} sx={{color:'white'}} /> 
-              </Grid>
-                :
-                <RoundedButton text='Submit' click={()=>sendEmail()} />}
-            </Grid>
-            <Grid container justifyContent='space-around' my={2} md={6}>
-                <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
-                Understand KPI Analytics for Productivity
-                </Typography>
-
-                <Typography fontWeight={400} textAlign='center' fontSize={17}>
-                  Our Simplified system helps you track, Performance measurement, Agile task planning and tracking software, Structured Appraisal and data capture. 
-                </Typography>
-            </Grid>
-            <Grid container justifyContent='center' my={4} px={3}>
+<Grid container justifyContent='center' my={4} px={3}>
             <Grid container justifyContent='center'>
               <Typography fontWeight={800} textAlign='center' my={2} mx={2} fontSize={25}>
-                Companies we helped grow
+                Our Existing Partners
               </Typography>
             </Grid>
             <Grid container md={8}>
@@ -166,20 +119,53 @@ export default function PartnerList(){
                 </FormControl>
               </Grid>
             <Grid container justifyContent='center' alignItems='center' mt={2} md={10} px={8}>
-              <Partners name={'Nigeria'} country={country} image={Rplus}/>
-              <Partners name={'Nigeria'} country={country} image={Imose}/>
-              <Partners name={'us'} country={country} image={Teesas}/>
-              <Partners name={'Nigeria'} country={country} image={Rplus}/>
-              <Partners name={'us'} country={country} image={Imose}/>
-              <Partners name={'Nigeria'} country={country} image={Rplus}/>
-              <Partners name={'us'} country={country} image={Fbank}/>
-              <Partners name={'Nigeria'} country={country} image={Wema}/>
-              <Partners name={'Ghana'} country={country} image={Rplus}/>
-              <Partners name={'Nigeria'} country={country} image={Wema}/>
+              <Partners name={'Nigeria'} country={country} image={Rplus} org='RevolutionPlus' email='RevolutionPlus@gmail.com' phone='08033434344'/>
+              <Partners name={'Nigeria'} country={country} image={Imose} org='Imose' email='imose@gmail.com' phone='08033434344'/>
+              <Partners name={'us'} country={country} image={Teesas} org='Teesas' email='teesas@gmail.com' phone='08033434344'/>
+              <Partners name={'Nigeria'} country={country} image={Rplus} org='RevolutionPlus' email='RevolutionPlus@gmail.com' phone='08033434344'/>
+              <Partners name={'us'} country={country} image={Imose} org='Imose' email='Imose@gmail.com' phone='08033434344'/>
+              <Partners name={'Nigeria'} country={country} image={Rplus} org='RevolutionPlus' email='RevolutionPlus@gmail.com' phone='08033434344'/>
+              <Partners name={'us'} country={country} image={Fbank} org='Firstbank' email='firstbank@gmail.com' phone='08033434344'/>
+              <Partners name={'Nigeria'} country={country} image={Wema} org='Wema' email='Wemabank@gmail.com' phone='08033434344'/>
+              <Partners name={'Ghana'} country={country} image={Rplus} org='RevolutionPlus' email='RevolutionPlus@gmail.com' phone='08033434344'/>
+              <Partners name={'Nigeria'} country={country} image={Wema} org='Wema bank' email='Wemabank@gmail.com' phone='08033434344'/>
               {/* <Partners image={Sterling}/> */}
             </Grid>
             
           </Grid>
+
+            <Grid container md={7} sm={12} px={{md:8, sm:1}} p={3} sx={{backgroundColor:'#FBFDFF'}}>
+             
+              <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
+                Register to Become a Partner
+              </Typography> 
+              <Grid container>
+                {message && error ?<Typography color='red'>{message}</Typography>:(message && !error ?<Typography color='green'>{message}</Typography>:'')}
+              </Grid>
+              <TextField label='Name' placeholder='Name' type={'text'} name='name' onChange={handleForm} value={onChange.name} fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
+              <TextField label='Email' placeholder='Email' type={'email'} name='email' onChange={handleForm} value={onChange.email} fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
+              <TextField label='Country' placeholder='Country' type={'text'} name='country' value={onChange.country} onChange={handleForm} fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
+              <TextField label='Phone Number' placeholder='Phone Number' type={'number'} value={onChange.phone} onChange={handleForm} name='phone' fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
+              <TextField label='Organization Name' placeholder='Organization Name' value={onChange.organization} onChange={handleForm} type={'text'} name='organization' fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required /> <br/>
+              <TextField label='Designation' placeholder='Designation' value={onChange.designation} type={'text'} onChange={handleForm} name='designation' fullWidth sx={{marginY:1, backgroundColor:'#fff'}} required />
+              
+              { loading ?
+               <Grid sx={{bgcolor:'#031842'}} px={5} borderRadius={2} py={1}> 
+                <CircularProgress size={18} sx={{color:'white'}} /> 
+              </Grid>
+                :
+                <RoundedButton text='Submit' click={()=>sendEmail()} />}
+            </Grid>
+            <Grid container justifyContent='space-around' my={2} md={6}>
+                <Typography fontWeight={800} textAlign='center' my={2} fontSize={25}>
+                Understand KPI Analytics for Productivity
+                </Typography>
+
+                <Typography fontWeight={400} textAlign='center' fontSize={17}>
+                  Our Simplified system helps you track, Performance measurement, Agile task planning and tracking software, Structured Appraisal and data capture. 
+                </Typography>
+            </Grid>
+         
             </Grid>
             <Footer/>
         </Grid>

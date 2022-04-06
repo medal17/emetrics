@@ -56,7 +56,7 @@ export default function HeroSection(){
                     Acquiring Appraisal Data for maximum Productivity
                 </Typography>
                 <Typography fontWeight={400}>
-                    We are here partner with you towards transforming your business and 
+                    We are here to partner with you towards transforming your business and 
                     team with our end-to-end performance management and Apprasial software.  
                 </Typography>
                 <Grid container justifyContent='space-around' mt={2} py={2}>
